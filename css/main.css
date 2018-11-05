@@ -1911,10 +1911,10 @@ nav {
     background: #fff;
   }
   nav a {
-    color: #7a77ff !important;
+    color: #ff7777 !important;
   }
   nav a:hover {
-    color: #7a77ff;
+    color: #ff7777;
   }
 }
 
@@ -1979,15 +1979,15 @@ nav a:hover {
 }
 
 .p1-gradient-bg, .primary-btn, .primary-btn:after, .primary-btn2:after, .callto-area, .callto-area .btn-white:hover, .footer-social a:hover, .generic-banner {
-  background-image: -moz-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
-  background-image: -webkit-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
-  background-image: -ms-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
+  background-image: -moz-linear-gradient(0deg, #ff7777 0%, #369560 100%);
+  background-image: -webkit-linear-gradient(0deg, #ff7777 0%, #369560 100%);
+  background-image: -ms-linear-gradient(0deg, #ff7777 0%, #369560 100%);
 }
 
 .p1-gradient-color {
-  background: -moz-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
-  background: -webkit-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
-  background: -ms-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
+  background: -moz-linear-gradient(0deg, #ff7777 0%, #369560 100%);
+  background: -webkit-linear-gradient(0deg, #ff7777 0%, #369560 100%);
+  background: -ms-linear-gradient(0deg, #ff7777 0%, #369560 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2133,7 +2133,7 @@ nav a:hover {
 
 .is-sticky .default-header {
   height: 72px !important;
-  background-color: #222;
+  background-color: rgba(0,0,0,0.6);
   border-bottom: 1px solid #323232;
 }
 
