@@ -2206,7 +2206,7 @@ nav a:hover {
   transform: scale(0.9);
 }
 
-.gal img {
+.gal img:hover, .gal img:active {
   transform: scale(1) skew(3deg);
 }
 
