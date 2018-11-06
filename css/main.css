@@ -2128,12 +2128,11 @@ nav a:hover {
 }
 
 .sticky-wrapper {
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.6);
 }
 
 .is-sticky .default-header {
   height: 72px !important;
-  background-color: rgba(0,0,0,0.6);
   border-bottom: 1px solid #323232;
 }
 
