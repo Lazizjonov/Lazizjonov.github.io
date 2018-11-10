@@ -2680,3 +2680,69 @@ h6 {
     margin-right: -1px;
   }
 }
+
+/* --------------------
+:: 7.0 Instagram Area CSS 
+-------------------- */
+
+.instagram_gallery_item {
+    position: relative;
+    z-index: 1;
+}
+
+.instagram_gallery_item img {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    width: 100%;
+}
+
+.instagram_gallery_item .hover_overlay {
+    background: rgba(252, 108, 63, 0.7);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    position: absolute;
+    top: 0;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    width: 100%;
+    z-index: 5;
+}
+
+.instagram_gallery_item:hover .hover_overlay {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.instagram_gallery_item .follow-me a {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.instargram_area {
+    position: relative;
+    z-index: 1;
+}
+
+.instargram_area .owl-prev {
+    position: absolute;
+    width: 10%;
+    background-color: transparent;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: url(img/core-img/back.png), auto !important;
+    z-index: 9;
+}
+
+.instargram_area .owl-next {
+    position: absolute;
+    width: 10%;
+    background-color: transparent;
+    height: 100%;
+    top: 0;
+    right: 0;
+    cursor: url(img/core-img/next.png), auto !important;
+}
