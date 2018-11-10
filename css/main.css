@@ -1919,7 +1919,7 @@ nav {
 }
 
 nav.hide {
-  transform: scale(0);
+  transform: scale(1);
 }
 
 nav a {
@@ -2617,8 +2617,9 @@ h6 {
 }
 
 #navbar {
-  overflow: hidden;
+  min-height:50px;
   background-color: #333;
+  text-align: center;
 }
 
 /* Navbar links */
@@ -2669,13 +2670,31 @@ h6 {
 }
 
 @media (max-width: 1199px) {
-  
+  .lnr{
+    display: none!important;
+  }
+  .hide{
+    display: inline-block!important;
+  }
 }
 @media (max-width: 991px) {
-  
+ .lnr{
+    display: none!important;
+  }
+  .hide{
+    display: inline-block!important;
+  } 
 }
 @media (max-width: 767px) {
-
+  nav.hide {
+    transform: scale(0);
+  }
+  .lnr{
+    display: block!important;
+  }
+  .hide{
+    display: none!important;
+  }
   .jas li {
     margin-right: -1px;
   }
@@ -2745,4 +2764,11 @@ h6 {
     top: 0;
     right: 0;
     cursor: url(img/core-img/next.png), auto !important;
+}
+
+#portfolio{
+  padding-top: 100px;
+}
+.owl-item{
+  margin-left: 20px;
 }
