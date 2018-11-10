@@ -1911,20 +1911,20 @@ nav {
     background: #fff;
   }
   nav a {
-    color: #ff7777 !important;
+    color: #7a77ff !important;
   }
   nav a:hover {
-    color: #ff7777;
+    color: #7a77ff;
   }
 }
 
 nav.hide {
-  transform: scale(1);
+  transform: scale(0);
 }
 
 nav a {
   color: #fff;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   margin: 0 25px;
@@ -1979,15 +1979,15 @@ nav a:hover {
 }
 
 .p1-gradient-bg, .primary-btn, .primary-btn:after, .primary-btn2:after, .callto-area, .callto-area .btn-white:hover, .footer-social a:hover, .generic-banner {
-  background-image: -moz-linear-gradient(0deg, #ff7777 0%, #369560 100%);
-  background-image: -webkit-linear-gradient(0deg, #ff7777 0%, #369560 100%);
-  background-image: -ms-linear-gradient(0deg, #ff7777 0%, #369560 100%);
+  background-image: -moz-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
+  background-image: -webkit-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
+  background-image: -ms-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
 }
 
 .p1-gradient-color {
-  background: -moz-linear-gradient(0deg, #ff7777 0%, #369560 100%);
-  background: -webkit-linear-gradient(0deg, #ff7777 0%, #369560 100%);
-  background: -ms-linear-gradient(0deg, #ff7777 0%, #369560 100%);
+  background: -moz-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
+  background: -webkit-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
+  background: -ms-linear-gradient(0deg, #7a77ff 0%, #8cfe86 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2124,7 +2124,7 @@ nav a:hover {
 .default-header {
   padding: 20px 0;
   width: 100% !important;
-  background-color: rgba(0,0,0,0.6);
+  background: transparent;
 }
 
 .sticky-wrapper {
@@ -2133,6 +2133,7 @@ nav a:hover {
 
 .is-sticky .default-header {
   height: 72px !important;
+  background-color: #222;
   border-bottom: 1px solid #323232;
 }
 
@@ -2202,11 +2203,6 @@ nav a:hover {
 .gal img {
   width: 100%;
   padding: 7px 0;
-  transform: scale(0.9);
-}
-
-.gal img:hover, .gal img:active {
-  transform: scale(1) skew(3deg);
 }
 
 @media (max-width: 500px) {
@@ -2618,4 +2614,69 @@ h6 {
 
 .switch-wrap p {
   margin: 0;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+.logo {
+  display: none;
+}
+.sticky .logo{
+  display: block;
+}
+
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.jas{
+  text-align: center;  
+}
+.jas li{
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  padding-top: 20px; 
+  display:inline-block;
+  margin-right: 20%;
+}
+
+@media (max-width: 1199px) {
+  
+}
+@media (max-width: 991px) {
+  
+}
+@media (max-width: 767px) {
+
+  .jas li {
+    margin-right: -1px;
+  }
 }
