@@ -1905,7 +1905,8 @@ nav {
     position: absolute;
     right: 0;
     top: 47px;
-    text-align: right;
+    width: 200px;
+    text-align: center;
     padding: 20px 0;
     z-index: 5;
     background: #fff;
@@ -2658,7 +2659,12 @@ h6 {
 }
 
 .jas{
-  text-align: center;  
+  width: 100%; 
+  height: 90px; 
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center;
+
 }
 .jas li{
   justify-content: center;
@@ -2666,24 +2672,20 @@ h6 {
   height: 100%;
   padding-top: 20px; 
   display:inline-block;
-  margin-right: 20%;
+}
+
+.lnr{
+    display: none!important;
+}
+.hide{
+   display: inline-block!important;
 }
 
 @media (max-width: 1199px) {
-  .lnr{
-    display: none!important;
-  }
-  .hide{
-    display: inline-block!important;
-  }
+  
 }
 @media (max-width: 991px) {
- .lnr{
-    display: none!important;
-  }
-  .hide{
-    display: inline-block!important;
-  } 
+ 
 }
 @media (max-width: 767px) {
   nav.hide {
@@ -2695,9 +2697,10 @@ h6 {
   .hide{
     display: none!important;
   }
-  .jas li {
-    margin-right: -1px;
+  .jas li.c, .jas li.b{
+    display: none;
   }
+
 }
 
 /* --------------------
@@ -2772,3 +2775,4 @@ h6 {
 .owl-item{
   margin-left: 20px;
 }
+
