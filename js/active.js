@@ -28,7 +28,7 @@
         })
         // :: 2.0 Instagram Slider Active Code
         $(".instargram_area").owlCarousel({
-            items: 6,
+            items: 3,
             loop: true,
             autoplay: true,
             smartSpeed: 800,
@@ -42,16 +42,16 @@
                     items: 1
                 },
                 576: {
-                    items: 1
+                    items: 2
                 },
                 768: {
-                    items: 4
+                    items: 2
                 },
                 992: {
-                    items: 5
+                    items: 3
                 },
                 1200: {
-                    items: 6
+                    items: 3
                 }
             }
         })
