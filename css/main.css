@@ -2204,6 +2204,12 @@ nav a:hover {
 .gal img {
   width: 100%;
   padding: 7px 0;
+  transition-duration: 1s;
+}
+.gal img:hover{
+    transition: all;
+    transition-duration: 1s;
+    transform: translateZ(10px) translateX(10px);
 }
 
 @media (max-width: 500px) {
@@ -2359,6 +2365,7 @@ nav a:hover {
   margin-bottom: 45px;
   text-align: center;
 }
+
 
 .single-blog h4 {
   text-transform: uppercase;
@@ -2638,10 +2645,10 @@ h6 {
   color:blue;
 }
 .logo {
-  display: none;
+  visibility: hidden;
 }
 .sticky .logo{
-  display: block;
+  visibility: visible;
 }
 
 
@@ -2674,7 +2681,7 @@ h6 {
   justify-content: center;
   width: auto;
   height: 100%;
-  display:inline-block;
+  display:inline-flex;
   color: white
 }
 #about{
@@ -2822,7 +2829,77 @@ h6 {
 #portfolio{
   padding-top: 100px;
 }
-.owl-item{
-  margin: 0 20px;
+#my_iframe{
+  height: 293px;
+  width: 487px;
+  position: absolute;
+  top: 28%;
+  left: 44%;
+  background-color: rgba(255,255,255,0.5);
+  transform: rotateX(28deg) rotateY(24deg) rotateZ(-16deg);
+}
+.display-true{
+  display: block;
+}
+.display-false{
+  display: none;
 }
 
+.d{
+  display: inline-flex;
+}
+#portfolio{
+  z-index: 3;
+  background-color: white;
+  perspective: 1000px;
+  position: relative;
+}
+.cont{
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    transition: 1s;
+    transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
+    transform-style: preserve-3d;
+}
+.cont-orig{
+  transform: none;
+}
+#pheader{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+.disp-none{
+  display: none;
+}
+.join-elem{
+  z-index: 2;
+  transition: all 1s;
+}
+.make-head{
+  /*positioning in center scaling size bigger*/
+  transform: scale(1.7)!important;
+}
+
+.elem{
+  max-width: 200px;
+  min-width: 199px;
+  margin:10px;
+  transition: 0.5s;
+}
+.elem:hover{
+  cursor: pointer;
+  transform: translateZ(10px);
+}
+@media (max-width: 767px) {
+  .cont{
+    transform: none;
+  }
+  #videodiv{
+    display: none;
+  }
+}
