@@ -2855,6 +2855,7 @@ h6 {
   position: relative;
 }
 .cont{
+    top: -70px;
     margin:auto;
     display: flex;
     flex-wrap: wrap;
@@ -2872,6 +2873,7 @@ h6 {
   width: 100%;
   position: absolute;
   text-align: center;
+  transition: all 1s;
 }
 .disp-none{
   display: none;
@@ -2890,10 +2892,14 @@ h6 {
   min-width: 199px;
   margin:10px;
   transition: 0.5s;
+  -webkit-box-shadow: 1px 4px 25px 0px rgba(255,162,161,0.85); 
+  box-shadow: 1px 4px 25px 0px rgba(255,162,161,0.85);
 }
 .elem:hover{
   cursor: pointer;
   transform: translateZ(10px);
+  -webkit-box-shadow: -13px 23px 25px 0px rgba(255,218,153,0.85); 
+  box-shadow: -13px 23px 25px 0px rgba(255,218,153,0.85);
 }
 @media (max-width: 767px) {
   .cont{
@@ -2903,3 +2909,33 @@ h6 {
     display: none;
   }
 }
+.image-store{
+  position: relative;
+  height: 400px;
+}
+.joha-title{
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section{
+  overflow: hidden;
+}
+.go-right{
+  transition: all 1s;
+  transform: translateX(30%) translateY(200px) rotateZ(90deg);
+}
+.imgs{
+  position: absolute;
+  -webkit-box-shadow: 1px 4px 25px 0px rgba(255,162,161,0.85); 
+  box-shadow: 1px 4px 25px 0px rgba(255,162,161,0.85);
+}
+#img1{top: 20%; left: 10%;}
+#img2{top: 40%; left: 70%;}
+#img3{top: 30%; left: 40%;}
+#img4{top: 6%; left: 60%;}
+#img5{top: 50%; left: 6%;}
+#img6{top: 50%; left: 30%;}
+#img7{top: 0%; left: 22%;}
+#img8{top: 57%; left: 63%;}
+#img9{top: 43%; left: 17%;}
