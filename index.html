@@ -465,11 +465,16 @@ var newframe = document.getElementById('my_iframe');
   setTimeout(function() {foo();}, 5000);
 
   	$('.elem').on('click',function(){
-  	$('.cont').toggleClass('cont-orig');
-  	$('.elem').toggleClass('join-elem disp-none');
-  	$('#pheader').toggleClass('go-right');
-  	$(this).toggleClass('make-head disp-none');
-  })
+	  	$('.cont').toggleClass('cont-orig');
+	  	$('.elem').toggleClass('join-elem disp-none');
+	  	$('#pheader').toggleClass('go-right');
+	  	$(this).toggleClass('make-head disp-none');
+  	})
+  	var counter = 0
+  	$('.imgs').hover(function(){
+  		$(this).css('z-index', counter++);
+  	})
+
 </script>
 		</body>
 	</html>

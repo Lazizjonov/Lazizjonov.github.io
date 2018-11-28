@@ -2874,6 +2874,7 @@ h6 {
   position: absolute;
   text-align: center;
   transition: all 1s;
+  text-shadow: -13px -39px 10px rgba(75,118,127,0.65);
 }
 .disp-none{
   display: none;
@@ -2912,6 +2913,8 @@ h6 {
 .image-store{
   position: relative;
   height: 400px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 .joha-title{
   display: inline-flex;
@@ -2926,9 +2929,16 @@ section{
   transform: translateX(30%) translateY(200px) rotateZ(90deg);
 }
 .imgs{
+  transition: all 1s;
   position: absolute;
   -webkit-box-shadow: 1px 4px 25px 0px rgba(255,162,161,0.85); 
   box-shadow: 1px 4px 25px 0px rgba(255,162,161,0.85);
+}
+.imgs:hover{
+  cursor: pointer;
+  transform: translateZ(10px);
+  -webkit-box-shadow: -13px 23px 25px 0px rgba(255,218,153,0.85); 
+  box-shadow: -13px 23px 25px 0px rgba(255,218,153,0.85);
 }
 #img1{top: 20%; left: 10%;}
 #img2{top: 40%; left: 70%;}
@@ -2936,6 +2946,6 @@ section{
 #img4{top: 6%; left: 60%;}
 #img5{top: 50%; left: 6%;}
 #img6{top: 50%; left: 30%;}
-#img7{top: 0%; left: 22%;}
+#img7{top: 3%; left: 22%;}
 #img8{top: 57%; left: 63%;}
 #img9{top: 43%; left: 17%;}
