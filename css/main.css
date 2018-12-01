@@ -2940,12 +2940,15 @@ section{
   -webkit-box-shadow: -13px 23px 25px 0px rgba(255,218,153,0.85); 
   box-shadow: -13px 23px 25px 0px rgba(255,218,153,0.85);
 }
-#img1{top: 20%; left: 10%;}
+#img1{top: 4%; left: 5%;}
 #img2{top: 40%; left: 70%;}
 #img3{top: 30%; left: 40%;}
 #img4{top: 6%; left: 60%;}
-#img5{top: 50%; left: 6%;}
-#img6{top: 50%; left: 30%;}
+#img5{top: 69%; left: 4%;}
+#img6{top: 80%; left: 25%;}
 #img7{top: 3%; left: 22%;}
-#img8{top: 57%; left: 63%;}
-#img9{top: 43%; left: 17%;}
+#img8{top: 95%; left: 63%;}
+#img9{top: 35%; left: 10%;}
+#joha-page{
+  height: -webkit-fill-available;
+}
