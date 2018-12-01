@@ -372,20 +372,132 @@
 	<div id="joha-cont container">
 		<div class="row">
 			<div class="col-md-7 col-xs-12 image-store">
-				<img src="img/blog-img/16.jpg" style="width: 120px; height: 100px" id="img1" class="imgs">
-				<img src="img/blog-img/15.jpg" style="width: 130px; height: 110px" id="img2" class="imgs">
-				<img src="img/blog-img/14.jpg" style="width: 200px; height: 140px" id="img3" class="imgs">
-				<img src="img/blog-img/13.jpg" style="width: 150px; height: 110px" id="img4" class="imgs">
-				<img src="img/blog-img/12.jpg" style="width: 150px; height: 150px" id="img5" class="imgs">
-				<img src="img/blog-img/11.jpg" style="width: 200px; height: 170px" id="img6" class="imgs">
-				<img src="img/blog-img/10.jpg" style="width: 200px; height: 150px" id="img7" class="imgs">
-				<img src="img/blog-img/9.jpg" style="width: 190px; height: 120px" id="img8" class="imgs">
-				<img src="img/blog-img/8.jpg" style="width: 100px; height: 80px" id="img9" class="imgs">
+				<img src="img/blog-img/16.jpg" style="width: 20%; height: 100px" id="img1" class="imgs">
+				<img src="img/blog-img/15.jpg" style="width: 30%; height: 110px" id="img2" class="imgs">
+				<img src="img/blog-img/14.jpg" style="width: 35%; height: 140px" id="img3" class="imgs">
+				<img src="img/blog-img/13.jpg" style="width: 25%; height: 110px" id="img4" class="imgs">
+				<img src="img/blog-img/12.jpg" style="width: 25%; height: 150px" id="img5" class="imgs">
+				<img src="img/blog-img/11.jpg" style="width: 35%; height: 170px" id="img6" class="imgs">
+				<img src="img/blog-img/10.jpg" style="width: 35%; height: 150px" id="img7" class="imgs">
+				<img src="img/blog-img/9.jpg" style="width: 20%; height: 120px" id="img8" class="imgs">
+				<img src="img/blog-img/8.jpg" style="width: 15%; height: 80px" id="img9" class="imgs">
 			</div>
 			<div class="col-md-5 col-xs-12 text-center joha-title">
 				<h3>Lorem ipsum</h3>
 				<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
 			</div>
+		</div>
+	</div>
+</section>
+<style>
+	#jassec-cont{
+		height: 500px;	
+	}
+	.block{
+		position: absolute;
+		transition: all 1s;
+	}
+	#img-1{
+	    background-color: orange;
+	}
+	#img-2{
+	    background-color: yellow;
+	}
+	#img-3{
+	    background-color: green;
+	}
+	#img-4{
+	    background-color: blue;
+	}
+	#img-5{
+	    background-color: gray;
+	}
+	#img-6{
+	    background-color: lightgreen;
+	}
+	#img-7{
+	    background-color: silver;
+	}
+	.block-0{
+	    height: 27%;
+	    width: 25%;
+	    top: 10%;
+	    left: 0;
+	    transform: rotateY(90deg);
+	   	z-index: 1;
+	}
+	.block-1{
+	    height: 27%;
+	    width: 25%;
+	    top: 10%;
+	    left: 5%;
+	    transform: rotateY(90deg);
+	   	z-index: 2;
+	}
+	.block-2{
+	    height: 27%;
+	    width: 25%;
+	    top: 10%;
+	    left: 10%;
+	    transform: rotateY(90deg);
+	   	z-index: 3;
+	}
+	.block-3{
+		left: 30%;
+		width: 40%;
+		top: 20%;
+		height: 50%;
+	   	z-index: 7;
+	}
+	.block-4{
+		height: 27%;
+	    width: 25%;
+	    top: 10%;
+	    right: 10%;
+	    transform: rotateY(-90deg);
+	   	z-index: 6;
+	}
+	.block-5{
+	    height: 27%;
+	    width: 25%;
+	    top: 10%;
+	    right: 5%;
+	    transform: rotateY(-90deg);
+	   	z-index: 5;
+	}
+	.block-6{
+	    height: 27%;
+	    width: 25%;
+	    top: 10%;
+	    right: 0%;
+	    transform: rotateY(-90deg);
+	   	z-index: 4;
+	}
+
+
+</style>
+<section id="jassec">
+	<div class="container" id="jassec-cont" style="position: relative; perspective: 1000px;">
+		<div id="img-1" class="block-0 block">
+			
+		</div>
+		<div id="img-2" class="block-1  block">
+			
+		</div>
+		<div id="img-3" class="block-2  block">
+			
+		</div>
+		<div id="img-4" class="block-3  block">
+			
+		</div>
+		<div id="img-5" class="block-4  block">
+			
+		</div>
+		<div id="img-6" class="block-5  block">
+			
+		</div>
+		<div id="img-7" class="block-6  block">
+			
 		</div>
 	</div>
 </section>
@@ -474,7 +586,93 @@ var newframe = document.getElementById('my_iframe');
   	$('.imgs').hover(function(){
   		$(this).css('z-index', counter++);
   	})
+  	var j12 = 0;
+  	var inter = window.setInterval(jasur, 5000);
+  	var timeo = 0;
+	$('.block').on('click',function(){
+		while(!($(this).hasClass('block-3'))){
+			jasur();
+		}
+		clearInterval(inter);
+		clearTimeout(timeo);
+		timeo = setTimeout(function(){inter = window.setInterval(jasur, 5000);}, 10000);
+	});
+  	function jasur(){
+	  $('#img-1').removeClass('block-'+j12%7);
+	  $('#img-1').addClass('block-'+(j12+1)%7);
+	  $('#img-2').removeClass('block-'+(j12+1)%7);
+	  $('#img-2').addClass('block-'+(j12+2)%7);
+	  $('#img-3').removeClass('block-'+(j12+2)%7);
+	  $('#img-3').addClass('block-'+(j12+3)%7);
+	  $('#img-4').removeClass('block-'+(j12+3)%7);
+	  $('#img-4').addClass('block-'+(j12+4)%7);
+	  $('#img-5').removeClass('block-'+(j12+4)%7);
+	  $('#img-5').addClass('block-'+(j12+5)%7);
+	  $('#img-6').removeClass('block-'+(j12+5)%7);
+	  $('#img-6').addClass('block-'+(j12+6)%7);
+	  $('#img-7').removeClass('block-'+(j12+6)%7);
+	  $('#img-7').addClass('block-'+j12%7);
+	  j12++;
+	  if (j12 === 8){
+	  	j12 = 1;
+	  }
+	}
 
+	
 </script>
 		</body>
 	</html>
+
+	<!--<section style="height: 1500px; background-color: skyblue;">
+	<style>
+		.wrapper {
+  width: 100%;
+}
+
+.w1 {
+  perspective: 1000px;
+}
+
+.wrapper h1 {
+  text-align: center;
+}
+
+
+.cube {
+  font-size: 100px;
+  width: 70%%;
+  margin: 400px auto;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  position: relative;
+}
+
+.side {
+  position: absolute;
+  width: 70%;
+  height: 500px;
+  
+  background: rgba(1,123,123,.5);
+  border: 1px solid rgba(0,0,0,.5);
+  
+  color: white; 
+  text-align: center;
+}
+
+.front  { transform:                  translateZ(400px); }
+.right  { transform: rotateY( 90deg)  translateZ(400px); }
+.left   { transform: rotateY(-90deg)  translateZ(400px); }
+.back   { transform: rotateY(-180deg) translateZ(400px); }
+	</style>
+	<div class="cubic col-xs-12">
+		<div class="wrapper w1">
+		  <h1><code>perspective: 1000px</code></h1>
+		  <div class="cube">
+		    <div class="side  front">1</div>
+		    <div class="side   back">6</div>
+		    <div class="side  right">4</div>
+		    <div class="side   left">3</div>
+		  </div>
+		</div>
+	</div>
+</section>-->
