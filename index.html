@@ -6,7 +6,7 @@
 		<!-- Favicon-->
 		<!--<link rel="shortcut icon" href="img/fav.png">-->
 		<!-- Author Meta -->
-		<meta name="author" content="CodePixar">
+		<meta name="author" content="Lazizjonov">
 		<!-- Meta Description -->
 		<meta name="description" content="">
 		<!-- Meta Keyword -->
@@ -14,7 +14,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Photography</title>
+		<title>MILLIYART media</title>
 
 		<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">  -->
 			<!--
@@ -336,32 +336,32 @@
 		<p>Lorem amedum kore sebuna ijo moiraz xuera nove diecu</p>
 	</div>
 	<div class="cont col-xs-12 col-md-9">
-		<div class="elem">
+		<div class="elem" id="port-1">
 			<h3>Lorem ipsum</h3>
 			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
 			<img src="img/blog-img/17.jpg">
 		</div>
-		<div class="elem">
+		<div class="elem" id="port-2">
 			<h3>Lorem ipsum</h3>
 			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
 			<img src="img/blog-img/18.jpg">
 		</div>
-		<div class="elem">
+		<div class="elem" id="port-3">
 			<h3>Lorem ipsum</h3>
 			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
 			<img src="img/blog-img/17.jpg">
 		</div>
-		<div class="elem">
+		<div class="elem" id="port-4">
 			<h3>Lorem ipsum</h3>
 			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
 			<img src="img/blog-img/19.jpg">
 		</div>
-		<div class="elem">
+		<div class="elem" id="port-5">
 			<h3>Lorem ipsum</h3>
 			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
 			<img src="img/blog-img/17.jpg">
 		</div>
-		<div class="elem">
+		<div class="elem" id="port-6">
 			<h3>Lorem ipsum</h3>
 			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
 			<img src="img/blog-img/18.jpg">
@@ -394,32 +394,46 @@
 		height: 500px;	
 	}
 	.block{
+		text-align: center;
 		position: absolute;
 		transition: all 1s;
+		background-color: white;
+	}
+	.block:before{
+	  content: "";
+	  position: absolute;
+	  margin-left:auto;
+	  margin-right: auto;
+	  left: 0;
+	  right:0;  
+	  width: 100%;
+	  height: 100%;
+	  z-index: 8;
+	  background-color: rgba(1,1,1,0.1);
 	}
 	#img-1{
-	    background-color: orange;
+	    
 	}
 	#img-2{
-	    background-color: yellow;
+	    
 	}
 	#img-3{
-	    background-color: green;
+	    
 	}
 	#img-4{
-	    background-color: blue;
+	    
 	}
 	#img-5{
-	    background-color: gray;
+	    
 	}
 	#img-6{
-	    background-color: lightgreen;
+	    
 	}
 	#img-7{
-	    background-color: silver;
+	    
 	}
 	.block-0{
-	    height: 27%;
+	    height: auto;
 	    width: 25%;
 	    top: 10%;
 	    left: 0;
@@ -434,7 +448,7 @@
 		transform: rotateY(80deg) translateY(20px);
 	}
 	.block-1{
-	    height: 27%;
+	    height: auto;
 	    width: 25%;
 	    top: 10%;
 	    left: 5%;
@@ -444,7 +458,7 @@
 		box-shadow: 26px 0px 22px -5px rgba(255,0,0,0.57);
 	}
 	.block-2{
-	    height: 27%;
+	    height: auto;
 	    width: 25%;
 	    top: 10%;
 	    left: 10%;
@@ -457,7 +471,7 @@
 		left: 30%;
 		width: 40%;
 		top: 20%;
-		height: 50%;
+		height: auto;
 	   	z-index: 7;
 	   	-webkit-box-shadow: -3px 0px 22px 8px rgba(255,0,0,0.57); 
 		box-shadow: -3px 0px 22px 8px rgba(255,0,0,0.57);
@@ -467,8 +481,11 @@
 		box-shadow: -3px 0px 39px 8px rgba(255,192,13,0.42);
 		transform: translateZ(20px) translateY(10px) translateX(10px);
 	}
+	.block-3:before{
+		display: none;
+	}
 	.block-4{
-		height: 27%;
+		height: auto;
 	    width: 25%;
 	    top: 10%;
 	    left: 70%;
@@ -483,7 +500,7 @@
 		box-shadow: -22px 4px 37px 7px rgba(255,242,36,0.42);
 	}
 	.block-5{
-	    height: 27%;
+	    height: auto;
 	    width: 25%;
 	    top: 10%;
 	    left: 75%;
@@ -493,7 +510,7 @@
 		box-shadow: -24px 0px 16px -3px rgba(255,26,26,0.56);
 	}
 	.block-6{
-	    height: 27%;
+	    height: auto;
 	    width: 25%;
 	    top: 10%;
 	    left: 80%;
@@ -508,25 +525,37 @@
 <section id="jassec">
 	<div class="container" id="jassec-cont" style="position: relative; perspective: 1000px;">
 		<div id="img-1" class="block-0 block">
-			jasur
+			<iframe style="width: 100%; height: 100%; z-index: 7;" id='my_iframe1'  src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		<div id="img-2" class="block-1  block">
-			johon
+			<h1>Lorem Ipsum</h1>
+			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
+			<img src="img/blog-img/17.jpg">
 		</div>
 		<div id="img-3" class="block-2  block">
-			xojiraq
+			<h1>Lorem Ipsum</h1>
+			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
+			<img src="img/blog-img/17.jpg">
 		</div>
 		<div id="img-4" class="block-3  block">
-			johabot
+			<h1>Lorem Ipsum</h1>
+			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
+			<img src="img/blog-img/17.jpg">
 		</div>
 		<div id="img-5" class="block-4  block">
-			lorem
+			<h1>Lorem Ipsum</h1>
+			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
+			<img src="img/blog-img/17.jpg">
 		</div>
 		<div id="img-6" class="block-5  block">
-			ipsum
+			<h1>Lorem Ipsum</h1>
+			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
+			<img src="img/blog-img/17.jpg">
 		</div>
 		<div id="img-7" class="block-6  block">
-			img-7
+			<h1>Lorem Ipsum</h1>
+			<p>Lasdja skhf shdifa xhgf sdfhls sdklfa;f xgh af cjkhs  dsdl zx fghlkjv lghzch asauv zxcvh isu</p>
+			<img src="img/blog-img/17.jpg">
 		</div>
 	</div>
 </section>
@@ -619,12 +648,13 @@ var newframe = document.getElementById('my_iframe');
   	var inter = window.setInterval(jasur, 5000);
   	var timeo = 0;
 	$('.block').on('click',function(){
+		document.getElementsByClassName('block-3')[0].src = "https://www.youtube.com/embed/9YffrCViTVk";
 		while(!($(this).hasClass('block-3'))){
 			jasur();
 		}
 		clearInterval(inter);
 		clearTimeout(timeo);
-		timeo = setTimeout(function(){inter = window.setInterval(jasur, 5000);}, 10000);
+		timeo = setTimeout(function(){inter = window.setInterval(jasur, 5000);}, 180000);
 	});
   	function jasur(){
 	  $('#img-1').removeClass('block-'+j12%7);
@@ -648,7 +678,6 @@ var newframe = document.getElementById('my_iframe');
 	}
 	
 
-	
 </script>
 		</body>
 	</html>

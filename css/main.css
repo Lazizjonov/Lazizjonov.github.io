@@ -2896,6 +2896,7 @@ h6 {
   -webkit-box-shadow: 1px 4px 25px 0px rgba(255,162,161,0.85); 
   box-shadow: 1px 4px 25px 0px rgba(255,162,161,0.85);
 }
+
 .elem:hover{
   cursor: pointer;
   transform: translateZ(10px);
