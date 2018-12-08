@@ -233,10 +233,10 @@ h1.course-header{
 }
 
 .go-bulbul-right{
-  transform: translateX(0) ;
+  transform: translateX(0)!important;
 }
 .go-bulbul-left{
-  transform: translateX(0) ;
+  transform: translateX(0)!important;
 }
 /*______________________________________________________Gallery_____________________________________________________*/
 
@@ -319,14 +319,14 @@ h1.course-header{
   background-image: url(img/white-back-1.jpg);
   background-attachment: fixed;
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size:cover;
   background-position:center;
 }
 .runner2{
   background-image: url(img/white-back-2.jpg);
   background-attachment: fixed;
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size:cover;
   background-position:center;
 }
 #map-section div div div{
@@ -493,6 +493,10 @@ h1.course-header{
   }
   footer p {
     font-size:20px;
+  }
+  .runner1, .runner2{
+    background-size: inherit;
+    background-position: center;
   }
 }
 
