@@ -316,14 +316,16 @@ h1.course-header{
   border-radius: 10px;
 }
 .runner1{
-  background-image: url(img/white-back-1.jpg);
+  transition: background-color 1s linear;
+  background-image: url(img/bg-1.jpg);
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
 }
 .runner2{
-  background-image: url(img/white-back-2.jpg);
+  transition: background-color 1s linear;
+  background-image: url(img/bg-2.jpg);
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size:cover;

@@ -15,6 +15,16 @@ var printer = setInterval(function(){
   }
 }, 500);
 //setTimeout(function(){preloader.style.display = "none"; clearInterval(printer);}, 4000);
+imgCount = 1;
+var jastimer = setInterval(function(){
+  document.getElementById("runner1").style.backgroundImage = "url(img/bg-" + imgCount + ".jpg)";
+  document.getElementById("runner2").style.backgroundImage = "url(img/bg-" + (imgCount+1) + ".jpg)";
+  imgCount++;
+  imgCount++;
+  if(imgCount > 8){
+    imgCount = 1;
+  }
+},12000);
 
 /*---------------------------------------------end-preloader-------------------------------------------------*/
 /*----------------------------------------------stickynav-------------------------------------------------*/
