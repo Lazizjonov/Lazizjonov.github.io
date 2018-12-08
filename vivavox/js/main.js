@@ -1,19 +1,6 @@
 
 /*---------------------------------------------preloader-------------------------------------------------*/
-var preloader = document.getElementById("preloader");
-var hello = document.getElementById("hello");
-var helloCount = 0;
-var words = [document.getElementById("korhello").innerHTML, "HELLO", "BONJOUR", "CIAO", document.getElementById("arabhello").innerHTML, document.getElementById("ruhello").innerHTML,"SALOM"];
-var printer = setInterval(function(){
-  if(hello.innerHTML === words[helloCount-1] || helloCount === 0 ){
-  	hello.innerHTML = words[helloCount++];
-  	if(helloCount === 8){
-  		//helloCount = 0;
-      clearInterval(printer);
-      preloader.style.display = "none";
-  	}
-  }
-}, 500);
+
 //setTimeout(function(){preloader.style.display = "none"; clearInterval(printer);}, 4000);
 imgCount = 1;
 var jastimer = setInterval(function(){
