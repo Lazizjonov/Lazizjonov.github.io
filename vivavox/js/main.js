@@ -54,42 +54,42 @@ function checkAnimation() {
         // Start the animation
         $elem1.addClass('go-bulbul-right');
     } else {
-        $elem1.removeClass('go-bulbul-right');
+        //$elem1.removeClass('go-bulbul-right');
     }
     var $elem2 = $('#front-side-2');
     if (isScrolledIntoView($elem2)) {
         // Start the animation
         $elem2.addClass('go-bulbul-left');
     } else {
-        $elem2.removeClass('go-bulbul-left');
+        //$elem2.removeClass('go-bulbul-left');
     }
     var $elem3 = $('#front-side-3');
     if (isScrolledIntoView($elem3)) {
         // Start the animation
         $elem3.addClass('go-bulbul-right');
     } else {
-        $elem3.removeClass('go-bulbul-right');
+        //$elem3.removeClass('go-bulbul-right');
     }
     var $elem3 = $('#front-side-4');
     if (isScrolledIntoView($elem3)) {
         // Start the animation
         $elem3.addClass('go-bulbul-right');
     } else {
-        $elem3.removeClass('go-bulbul-right');
+        //$elem3.removeClass('go-bulbul-right');
     }
     var $elem3 = $('#front-side-5');
     if (isScrolledIntoView($elem3)) {
         // Start the animation
         $elem3.addClass('go-bulbul-left');
     } else {
-        $elem3.removeClass('go-bulbul-left');
+        //$elem3.removeClass('go-bulbul-left');
     }
     var $elem3 = $('#front-side-6');
     if (isScrolledIntoView($elem3)) {
         // Start the animation
         $elem3.addClass('go-bulbul-right');
     } else {
-        $elem3.removeClass('go-bulbul-right');
+        //$elem3.removeClass('go-bulbul-right');
     }
 }
 
