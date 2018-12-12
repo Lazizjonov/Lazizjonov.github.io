@@ -639,7 +639,7 @@ var newframe = document.getElementById('my_iframe');
   	var inter = window.setInterval(jasur, 5000);
   	var timeo = 0;
 	$('.block').on('click',function(){
-		$(".block-3 iframe").attr('src',"https://play.md/embed/3322472?title=false&autoplay=false");
+		$(".block-3 iframe").attr('src',$("block-3 iframe").src);
 		while(!($(this).hasClass('block-3'))){
 			jasur();
 		}
