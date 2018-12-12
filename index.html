@@ -639,7 +639,7 @@ var newframe = document.getElementById('my_iframe');
   	var inter = window.setInterval(jasur, 5000);
   	var timeo = 0;
 	$('.block').on('click',function(){
-		document.getElementsByClassName('block-3')[0].src = "https://www.youtube.com/embed/9YffrCViTVk";
+		$(".block-3 iframe").attr('src',"https://play.md/embed/3322472?title=false&autoplay=false");
 		while(!($(this).hasClass('block-3'))){
 			jasur();
 		}
@@ -667,7 +667,30 @@ var newframe = document.getElementById('my_iframe');
 	  	j12 = 1;
 	  }
 	}
-	
+	var iframeClick = function () {
+	    var isOverIframe = false,
+	    windowLostBlur = function () {
+	        if (isOverIframe === true) {
+	      clearInterval(inter);
+	      clearTimeout(timeo);
+	            timeo = setTimeout(function(){inter = window.setInterval(jasur, 5000);}, 180000);
+	            isOverIframe = false;
+	        }
+	    };
+	    jQuery(window).focus();
+	    jQuery('iframe').mouseenter(function(){
+	        isOverIframe = true;
+	        //console.log(isOverIframe);
+	    });
+	    jQuery('iframe').mouseleave(function(){
+	        isOverIframe = false;
+	        //console.log(isOverIframe);
+	    });
+	    jQuery(window).blur(function () {
+	        windowLostBlur();
+	    });
+	};
+	iframeClick();
 //________________________________________________________________________________________________________
 // function myFunction1(x) {
 //   if (x.matches) { // If media query matches
