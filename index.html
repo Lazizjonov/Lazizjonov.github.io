@@ -161,6 +161,7 @@
 					background-color: gold;
 					top:0;
 					transform: rotate(-10deg);
+					animation: fromLeft 0.5s linear;
 				}
 				nav a:hover:after{
 					content: "";
@@ -170,10 +171,18 @@
 					background-color: gold;
 					bottom:0;
 					transform: rotate(-10deg);
-
+					animation: fromRight 0.5s linear;
+				}
+				@keyframes fromLeft{
+					0%{transform: translateX(-100%) rotate(10deg);background-color: rgba(0,0,0,0);};
+					100%{transform: rotate(-10deg);background-color: gold;};
+				}
+				@keyframes fromRight{
+					0%{transform: translateX(100%) rotate(10deg); background-color: rgba(0,0,0,0);};
+					100%{transform: rotate(-10deg);background-color: gold;};
 				}
 				.carousel-item.active{
-					transition: all 5s;
+					transition: all 10s;
 					transform: scale(1.2);
 				}
 			</style>
