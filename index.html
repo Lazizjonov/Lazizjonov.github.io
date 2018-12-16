@@ -153,6 +153,28 @@
 					color: gold;
 					position: relative;	
 				}
+				nav a:before{
+					position: absolute;
+					width: 40px;
+					content: "";
+					height: 4px;
+					background-color: gold;
+					transition: all 0.2s linear;
+					top: 0;
+					transform: translateX(-100%) rotate(10deg);
+					background-color: rgba(0,0,0,0);
+				}
+				nav a:after{
+					position: absolute;
+					width: 40px;
+					content: "";
+					height: 4px;
+					background-color: gold;
+					transition: all 0.2s linear;
+					bottom: 0;
+					transform: translateX(100%) rotate(10deg);
+					background-color: rgba(0,0,0,0);
+				}
 				nav a:hover:before{
 					content: "";
 					position: absolute;
@@ -161,7 +183,7 @@
 					background-color: gold;
 					top:0;
 					transform: rotate(-10deg);
-					animation: fromLeft 0.5s linear;
+					animation: fromLeft 0.2s linear;
 				}
 				nav a:hover:after{
 					content: "";
@@ -171,7 +193,7 @@
 					background-color: gold;
 					bottom:0;
 					transform: rotate(-10deg);
-					animation: fromRight 0.5s linear;
+					animation: fromRight 0.2s linear;
 				}
 				@keyframes fromLeft{
 					0%{transform: translateX(-100%) rotate(10deg);background-color: rgba(0,0,0,0);};
