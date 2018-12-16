@@ -340,6 +340,12 @@ h1.course-header{
 #slider .carousel-item img{
   width: 100%!important;
 }
+.navbar-brand{
+  visibility: hidden;
+}
+.sticky .navbar-brand{
+  visibility: visible;
+}
 @media screen and (max-width: 992px) {
   .blog-elem{
     width: 95%;
