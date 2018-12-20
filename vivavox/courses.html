@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ViVaVoX courses</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<body style="background-color: whitesmoke;">
+	<div id="preloader" class="bg-coffee-5">
+		<div id="hello"></div>
+		<div id="ruhello" style="display: none;">Привет</div>
+		<div id="arabhello" style="display: none;">مَرْحَبًا  </div>
+		<div id="korhello" style="display: none;">안녕하세요</div>
+	</div>
+	<script>
+		var preloader = document.getElementById("preloader");
+		var hello = document.getElementById("hello");
+		var helloCount = 0;
+		var words = [document.getElementById("korhello").innerHTML, "HELLO", "BONJOUR", "CIAO", document.getElementById("arabhello").innerHTML, document.getElementById("ruhello").innerHTML,"SALOM"];
+		var printer = setInterval(function(){
+		  if(hello.innerHTML === words[helloCount-1] || helloCount === 0 ){
+		  	hello.innerHTML = words[helloCount++];
+		  	if(helloCount === 8){
+		  		//helloCount = 0;
+		      clearInterval(printer);
+		      preloader.style.display = "none";
+		  	}
+		  }
+		}, 700);
+	</script>
+	<div class="pre-nav bg-coffee-1">
+		<div id="logo"><a href="index.html"><img style="height: 60px;" src="img/logo.png"></a></div>
+		<div class="info">
+			<div class="pre-nav-elem mob-disp-none" style="font-size: 20px;"><i class="fab fa-facebook"></i></div>
+			<div class="pre-nav-elem mob-disp-none" style="font-size: 20px;"><i class="fab fa-instagram"></i></div>
+			<div class="pre-nav-elem mob-disp-none" style="font-size: 20px;"><i class="fab fa-telegram"></i></div>
+			<div class="pre-nav-elem">Tel: +998 99 999-99-99</div>
+			<div class="pre-nav-elem">Tel: +998 99 999-99-99</div>
+			<div class="pre-nav-elem mob-disp-none">Mail: testi@test.test</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-coffee-3" id="navbar">
+	  	<a class="navbar-brand" href="#slider"><img src="img/logo.png" style="width: 70px; height: auto;"></a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    	<ul class="navbar-nav mr-auto">
+	    		<li class="nav-item dropdown">
+	        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Courses
+	        		</a>
+	        		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          			<a class="dropdown-item" href="#">Math</a>
+	          			<a class="dropdown-item" href="#">Artificial</a>
+	          			<a class="dropdown-item" href="#">whatever</a>
+	        		</div>
+	      		</li>
+	      		<li class="nav-item active">
+	        		<a class="nav-link" href="#runner2">About us</a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link" href="#Gallery">Gallery</a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link" href="#blog">Blog</a>
+	      		</li>
+	      		<li class="nav-item">
+	        		<a class="nav-link" href="#map-section">Contacts</a>
+	      		</li>
+	    	</ul>
+	  	</div>
+	</nav>
+	<section class="course-area">
+		<div class="course-div" >
+			<h1>Mathematics</h1>
+			<h3>About course:</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
+			</p>
+			<h3>Teacher:</h3>
+			<p>
+				Aenean massa. Cum sociis natoque 
+			</p>
+			<button type="button" class="btn btn-secondary">See more...</button>
+		</div>
+		<div class="course-div" >
+			<h1>Mathematics</h1>
+			<h3>About course:</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
+			</p>
+			<h3>Teacher:</h3>
+			<p>
+				Aenean massa. Cum sociis natoque 
+			</p>
+			<button type="button" class="btn btn-secondary">See more...</button>
+		</div>
+		<div class="course-div" >
+			<h1>Mathematics</h1>
+			<h3>About course:</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
+			</p>
+			<h3>Teacher:</h3>
+			<p>
+				Aenean massa. Cum sociis natoque 
+			</p>
+			<button type="button" class="btn btn-secondary">See more...</button>
+		</div>
+		<div class="course-div" >
+			<h1>Mathematics</h1>
+			<h3>About course:</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
+			</p>
+			<h3>Teacher:</h3>
+			<p>
+				Aenean massa. Cum sociis natoque 
+			</p>
+			<button type="button" class="btn btn-secondary">See more...</button>
+		</div>
+		<div class="course-div" >
+			<h1>Mathematics</h1>
+			<h3>About course:</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
+			</p>
+			<h3>Teacher:</h3>
+			<p>
+				Aenean massa. Cum sociis natoque 
+			</p>
+			<button type="button" class="btn btn-secondary">See more...</button>
+		</div>
+		<div class="course-div" >
+			<h1>Mathematics</h1>
+			<h3>About course:</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
+			</p>
+			<h3>Teacher:</h3>
+			<p>
+				Aenean massa. Cum sociis natoque 
+			</p>
+			<button type="button" class="btn btn-secondary">See more...</button>
+		</div>
+		<div class="course-div" >
+			<h1>Mathematics</h1>
+			<h3>About course:</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
+			</p>
+			<h3>Teacher:</h3>
+			<p>
+				Aenean massa. Cum sociis natoque 
+			</p>
+			<button type="button" class="btn btn-secondary">See more...</button>
+		</div>
+	</section>
+</body>
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/main.js"></script> -->
+<script>
+	/*----------------------------------------------stickynav-------------------------------------------------*/
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+/*---------------------------------------------end-stickynav-------------------------------------------------*/
+</script>
+</html>

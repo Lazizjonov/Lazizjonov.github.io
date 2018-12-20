@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(56, 34, 15, .8)!important;
+  transition: all 0.2s;
 }
 
 #hello{
@@ -67,7 +68,7 @@
 
 @media screen and (max-width: 992px) {
   .pre-nav {
-    height: 140px;
+    height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +140,9 @@
   align-items: center;
   justify-content: center;
 }
-
+#logo{
+  cursor: pointer;
+}
 .carousel-indicators li{
   height: 20px!important;
 }
@@ -514,3 +517,46 @@ h1.course-header{
 footer{padding: 25px;}
 footer ul, footer li{list-style-type: none;}
 .list{margin-top: 15px;}
+/*------------------------------------------------------------course.html-----------------------------------------------------*/
+
+
+.course-area{
+  padding-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.course-div{
+  padding: 15px;
+}
+.course-div button{
+  float: right;
+}
+.course-div{
+  min-width: 25%;
+  width: 25%;
+}
+@media screen and (max-width: 992px) {
+  .course-div{
+    min-width: 50%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .course-div{
+    min-width: 100%!important;
+    width: 100%!important;
+  }
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #967259;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #967259; 
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
