@@ -524,27 +524,70 @@ footer ul, footer li{list-style-type: none;}
   padding-top: 200px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
 }
 .course-div{
   padding: 15px;
 }
 .course-div button{
   float: right;
+  margin-right: 10px;
 }
 .course-div{
-  min-width: 25%;
-  width: 25%;
+  min-width: 95%;
+  width: 95%;
+  margin: 30px;
+  background-color: bisque;
+}
+.course-div:hover{
+}
+.insider-1{
+  width: 50%;
+  min-width: 50%;
+}
+.insider-2{
+  width: 50%;
+  min-width: 50%;
+}
+.inside-course{
+  display: flex;
+  flex-flow: row;
+  transition: all 1s;
+}
+.inside-course img{
+  width: 100%;
+  height: 300px;
+  transition: all 0.3s;
+}
+.inside-course img{
+  transform: translateX(5%) translateY(-15%);
+}
+.course-div button{
+  transform: translateY(80%);
+}
+.course-div button{
+  transition: all 0.3s;
+  border-radius: 0;
 }
 @media screen and (max-width: 992px) {
-  .course-div{
-    min-width: 50%;
-    width: 50%;
+  .insider-1{
+    width: 75%;
+    min-width: 75%;
   }
-}
+  .insider-2{
+    width: 25%;
+    min-width: 25%;
+  }
+} 
 @media screen and (max-width: 768px) {
-  .course-div{
-    min-width: 100%!important;
-    width: 100%!important;
+  .insider-1{
+    width: 100%;
+    min-width: 100%;
+  }
+  .insider-1{
+    width: 100%;
+    min-width: 100%;
   }
 }
 body::-webkit-scrollbar {
@@ -559,4 +602,22 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #967259; 
   box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.s-course-area{
+  margin:0;
+  padding-top: 23vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+.course-about{
+  width: 50%;
+  min-width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .course-about{
+    width: 100%;
+    min-width: 100%;
+  }
 }
