@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vivavox | Course-name</title>
+	<title>ViVaVoX | gallery</title>
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="fonts/css/all.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-light bg-coffee-3" id="navbar">
-	  	<a class="navbar-brand" href="#index.html"><img src="img/logo.png" style="width: 70px; height: auto;"></a>
+	  	<a class="navbar-brand" href="#slider"><img src="img/logo.png" style="width: 70px; height: auto;"></a>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
 	  	</button>
@@ -51,31 +51,46 @@
 	    	</ul>
 	  	</div>
 	</nav>
-	<section class="s-course-area">
-		<div class="course-about p-2">
-			<h1>Lorem ipsum sit amet dore</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<div class="conta">
-				<div class="course-about">
-					<h2>Sed do eiusmod tempor</h2>
-					<p>Javelit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>
-				<div class="course-about">
-					<h2>Jaboris nisi ut aliquip ex ea commodo</h2>
-					<p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
+	<section class="pad-giver">
+		<div class="conta">
+			<div class="img-class" id="head-pos">
+				<img src="img/galery-1.jpg">
 			</div>
-			<div class="btn-div">
-				<button type="button" class="btn btn-primary">Join course</button>
-				<button type="button" class="btn btn-secondary">Order a call</button>
+			<div class="text-class" id="head-text">
+				<h1>Lorem ipsum</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
 			</div>
 		</div>
-		<div class="course-about pr-2">
-			<img src="img/course-1.jpg">
+	</section>
+	<section class="photos">
+		<div class="photo" onclick="changeImg(this)">
+			<img src="img/galery-2.jpg">
+			<h1>Consectetur adipiscing</h1>
+			<p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa</p>
+		</div>
+		<div class="photo" onclick="changeImg(this)">
+			<img src="img/galery-3.jpg">
+			<h1>Consectetur adipiscing</h1>
+			<p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa</p>
+		</div>
+		<div class="photo" onclick="changeImg(this)">
+			<img src="img/galery-4.jpg">
+			<h1>Consectetur adipiscing</h1>
+			<p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa</p>
+		</div>
+		<div class="photo" onclick="changeImg(this)">
+			<img src="img/galery-5.jpg">
+			<h1>Consectetur adipiscing</h1>
+			<p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa</p>
+		</div>
+		<div class="photo" onclick="changeImg(this)">
+			<img src="img/galery-6.jpg">
+			<h1>Consectetur adipiscing</h1>
+			<p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa</p>
 		</div>
 	</section>
 </body>
-<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- <script src="js/main.js"></script> -->
@@ -99,5 +114,20 @@ function myFunction() {
   }
 }
 /*---------------------------------------------end-stickynav-------------------------------------------------*/
+
+function changeImg(el){
+	var tt = el.childNodes[1].src;
+	el.childNodes[1].src = document.getElementById("head-pos").childNodes[1].src;
+	document.getElementById("head-pos").childNodes[1].src = tt;
+	tt = el.childNodes[3].innerHTML;
+	el.childNodes[3].innerHTML = document.getElementById("head-text").childNodes[1].innerHTML;
+	document.getElementById("head-text").childNodes[1].innerHTML = tt;
+	tt = el.childNodes[5].innerHTML;
+	el.childNodes[5].innerHTML = document.getElementById("head-text").childNodes[3].innerHTML;
+	document.getElementById("head-text").childNodes[3].innerHTML = tt;
+	$([document.documentElement, document.body]).animate({
+        scrollTop: $("#head-pos").offset().top-70
+    }, 500);
+}
 </script>
 </html>

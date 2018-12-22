@@ -611,13 +611,68 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
 }
+.conta{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.course-about img{
+  width: 100%;
+  height: 100%;
+}
 .course-about{
   width: 50%;
   min-width: 50%;
+}
+.btn-div{
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-div button{
+  margin-left: 20px;
+  border-radius: 0;
+}
+.pad-giver{
+  padding-top: 150px;
 }
 @media screen and (max-width: 768px) {
   .course-about{
     width: 100%;
     min-width: 100%;
   }
+}
+
+.img-class img{
+  width: 100%;
+}
+.img-class{
+  width: 75%;
+  min-width: 75%;
+  padding:10px;
+}
+.text-class{
+  width: 25%;
+  min-width: 25%;
+  padding:10px;
+}
+.photos{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+.photo{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 25%;
+  min-width: 25%;
+}
+.photo img{
+  width: 100%;
+}
+.photo p{
+  display: none;
+}
+.photo:hover{
+  cursor: pointer;
 }
