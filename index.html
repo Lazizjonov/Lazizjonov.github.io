@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Site of the best programmer ever. Artificial Intelligence inventor. Just dont waste my time">
+	<meta name="keywords" content="Proffessional web developer, awesome design, headbroking backend, Artificial intelligence inventor">
+	<meta name="author" content="Lazizjono Jasurbek">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lazizjonov Jasurbek - About myself</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="indicator"></div>
+	<div class="scroll"><span>10%</span><p>scroll-down:)</p></div>
+	<section class="headSection">
+		<div class="ramka">
+			<div class="innerRamka">
+				<div class="man">
+					<div class="bosh"></div>
+					<div class="middle">
+						<div class="qorin"></div>
+						<div class="rh">
+							<div class="rightHand"></div>
+							<div class="rightHand2"></div>
+						</div>
+						<div class="lh">
+							<div class="leftHand"></div>
+							<div class="leftHand2"></div>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="lf">
+							<div class="lf1"></div>
+							<div class="lf2"></div>
+						</div>
+						<div class="rf">
+							<div class="rf1"></div>
+							<div class="rf2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mainText">
+			<h1>Lazizjonov Jasurbek</h1>
+			<p>I try to be a <strong>Creative</strong> person. This is my web site please enjoy your <br>time, check updates and don`t forget to find more...</p>
+		</div>
+	</section>
+</body>
+<script>
+	setTimeout(function(){
+			document.getElementsByClassName("headSection")[0].classList.add("steps"); //start
+		},1000);
+	// var showing = document.getElementById("el1");
+	// var prev = document.getElementById("le1");
+	var accept = 0;
+	var classes = ["steps", "gtr"];
+	var counter = 0;
+	document.addEventListener("wheel", function(e){
+		if(accept === 0){
+			accept = 1;
+			setTimeout(function(){
+	 	    	accept = 0;
+	 	    	//dont accept scrolling to avoid conflicting animation fo 0.5 second
+	 	    }, 500);
+			if(e.deltaY > 0){
+				//scrolled to down
+				if(counter===classes.length){
+					//user is in the end trying scroll down
+					//section must have reaction for this as 100 % of page was seen already
+				}else{
+					document.getElementsByClassName("headSection")[0].classList.add(classes[counter]);
+					document.getElementsByClassName("headSection")[0].classList.remove(classes[counter-1]);
+					counter++;
+				}
+			}else{
+				if(counter===0){
+					//user is at the begining try to scroll up 
+					// there should be a notification to scrol down not up
+					//or just nothing would go
+				}else{
+					document.getElementsByClassName("headSection")[0].classList.add(classes[counter-1]);
+					document.getElementsByClassName("headSection")[0].classList.remove(classes[counter]);
+					counter--;
+				}
+			}
+		}
+	});
+	// 	
+	// 		if(e.deltaY > 0){
+	// 			if(document.getElementById("el13") === showing){
+	// 				//nothing
+	// 				console.log("no way down");
+	// 			}else{
+	// 				showing.classList.remove("show-me");
+	// 				showing.classList.add("go-up");
+	// 				showing.nextElementSibling.classList.add("show-me");
+	// 				showing.nextElementSibling.classList.remove("go-down");
+	// 				showing = showing.nextElementSibling;
+	// 			}
+	// 		}else if(e.deltaY < 0){
+	// 			if(document.getElementById("el1") === showing){
+	// 				//nothing
+	// 				console.log("no way up");
+	// 			}else{
+	// 				showing.classList.remove("show-me");
+	// 				showing.classList.add("go-down");
+	// 				showing.previousElementSibling.classList.add("show-me");
+	// 				showing.previousElementSibling.classList.remove("go-up");
+	// 				showing = showing.previousElementSibling;
+	// 			}
+	// 		}
+	// 		prev.classList.remove("main");
+	// 		if(showing.classList.contains("el1")){document.getElementById("le1").classList.add("main"); prev = document.getElementById("le1");}
+	// 		if(showing.classList.contains("el2")){document.getElementById("le2").classList.add("main");prev = document.getElementById("le2");}
+	// 		if(showing.classList.contains("el3")){document.getElementById("le3").classList.add("main"); prev = document.getElementById("le3");}
+	// 		if(showing.classList.contains("el4")){document.getElementById("le4").classList.add("main"); prev = document.getElementById("le4");}
+	// 		if(showing.classList.contains("el5")){document.getElementById("le5").classList.add("main"); prev = document.getElementById("le5");}
+	// 		if(showing.classList.contains("el6")){document.getElementById("le6").classList.add("main"); prev = document.getElementById("le6");}
+	// 		if(showing.classList.contains("el7")){document.getElementById("le7").classList.add("main"); prev = document.getElementById("le7");}
+	// 		if(showing.classList.contains("el8")){document.getElementById("le8").classList.add("main"); prev = document.getElementById("le8");}
+	// 		if(showing.classList.contains("el9")){document.getElementById("le9").classList.add("main"); prev = document.getElementById("le9");}
+	// 		if(showing.classList.contains("el10")){document.getElementById("le10").classList.add("main"); prev = document.getElementById("le10");}
+	// 		if(showing.classList.contains("el11")){document.getElementById("le11").classList.add("main"); prev = document.getElementById("le11");}
+	// 		if(showing.classList.contains("el12")){document.getElementById("le12").classList.add("main"); prev = document.getElementById("le12");}
+	// 		if(showing.classList.contains("el13")){document.getElementById("le13").classList.add("main"); prev = document.getElementById("le13");}
+	// 		accept = 1;
+	// 	    // tepaga - [e.deltaY] pasga +
+		
+	// 	    setTimeout(function(){
+	// 	    	accept = 0;
+	// 	    }, 500);
+	// 	    return false;
+	// 	}
+	// }, true);
+
+</script>
+</html>
