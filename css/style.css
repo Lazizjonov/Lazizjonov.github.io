@@ -34,7 +34,9 @@ body {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-
+.logo img, .footer_logo img {
+    height: 50px;
+}
 /* line 16, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/theme-default.scss */
 a,
 .button {
@@ -1038,7 +1040,7 @@ h3 {
 .header-area .main-header-area .main-menu ul li {
   display: inline-block;
   position: relative;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 /* line 156, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_header.scss */
