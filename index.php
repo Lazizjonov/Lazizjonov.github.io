@@ -42,7 +42,6 @@
                         <div class="col-xl-5 col-md-5 ">
                             <div class="header_left">
                                 <p>Tarmoq bozorlari va eksportga yo'naltirilgan<br>ishlab chiqarish tadqiqotlari markazi</p>
-                                <?php echo 'jasur'; ?>
                             </div>
                         </div>
                         <div class="col-xl-7 col-md-7">
