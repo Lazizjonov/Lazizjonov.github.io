@@ -1,0 +1,147 @@
+.slider{
+    width: 100%;
+    height: calc(100vh);
+    position: relative;
+    overflow: hidden;
+
+    &__elem{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: come;
+
+        @include respond-600{
+            align-items: flex-end;
+            padding-bottom: 100px;
+        }
+
+        &.active{
+            left: 0;
+        }
+
+        h3{
+            font-size: 60px;
+            letter-spacing: 2px;
+            font-weight: 300;
+            line-height: 76px;
+            color: #fff;
+
+            @include respond-1200{
+                font-size: 70px;
+                line-height: 80px;
+            }
+            
+            @include respond-900{
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            @include respond-600{
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+
+        .con{
+            flex-flow: column;
+            align-items: flex-start;
+            max-width: 900px;
+            padding-left: 100px;
+
+
+            @include respond-1200{
+                max-width: 1200px;
+                padding-left: 140px;
+            }
+            
+            @include respond-900{
+                max-width: 600px;
+                padding-left: 40px;
+            }
+
+            @include respond-600{
+                max-width: 300px;
+                padding-left: 30px;
+            }
+        }
+
+        &--btn{
+            margin-top: 40px;
+            padding: 13px 30px;
+            font-size: 20px;
+
+
+            @include respond-600{
+                padding: 3px 14px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__btn{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        border: .5px solid silver;
+        border-radius: 50%;
+        top: calc(50% - 25px);
+        cursor: pointer;
+        transition: all 0.4s;
+        user-select: none;
+        font-size: 25px;
+        color: white;
+
+        
+
+        @include respond-600{
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover{
+            background-color: $base-color;
+            border: 0px solid silver;
+        }
+        &.left{
+            left: 50px;
+
+            @include respond-1200{
+                left: 80px;
+            }
+            
+            @include respond-900{
+                left: 30px;
+            }
+            
+            @include respond-600{
+                left: 10px;
+            }
+        }
+        &.right{
+            right: 50px;
+
+            @include respond-1200{
+                right: 80px;
+            }
+            
+            @include respond-900{
+                right: 30px;
+            }
+            
+            @include respond-600{
+                right: 10px;
+            }
+        }
+    }
+}

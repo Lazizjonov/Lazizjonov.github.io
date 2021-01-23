@@ -1,0 +1,124 @@
+
+<div class="prel active">
+    <div class="prel__hid">
+        <div class="prel__hid--up ani"></div>
+        <div class="prel__hid--down ani"></div>
+        <div class="prel__hid--text" data-src="ready">wait</div>
+        <div class="prel__hid--left ani"></div>
+        <div class="prel__hid--right ani"></div>
+    </div>
+</div>
+<!-- <section class="head">
+    <div class="con">
+        <div class="head__left">
+            <h1>center_name1<br>center_name2<br>center_name3<br>center_name4</h1>
+        </div>
+        <div class="head__right">
+            <a href="#" class="head__right--links">
+                <i class="fas fa-caret-down"></i>
+                <div class="linktext">dbase.contacts[0].shower</div>
+            </a>
+            <a href="#" class="head__right--links">
+                <i class="fas fa-caret-down"></i>
+                <div class="linktext">dbase.contacts[1].shower</div>
+            </a>
+            <a href="#" class="head__right--link">
+                <img src="share" alt="share">
+            </a>
+            <a href="#" class="head__right--link">
+                <img src="/imgs/icons/telegram.ico" alt="share">
+            </a>
+            <a href="#" class="head__right--link">
+                <img src="share" alt="share">
+            </a>
+        </div>
+    </div>
+</section> -->
+<section class="stick active">
+    <div class="con">
+        <a href="lang/" class="stick__logo">
+            <img src="/imgs/logo/logo-horiz-white.png" alt="idns logo">
+        </a>
+        <div class="stick__center">
+            <a href="lang/" class="stick__center--link">main</a>
+            <div class="stick__center--dropdown stick__center--link">
+                <a href="lang/aboutus" class="dropmain">about <i class="fas fa-caret-down"></i></a>
+                <div class="droping">
+                    <a href="lang/structure" class="droping__element">struct</a>
+                    <a href="lang/headStuff" class="droping__element">head_stuff</a>
+                    <a href="lang/documents" class="droping__element">hujjat</a>
+                </div>
+            </div>
+            <a href="lang/services" class="stick__center--link">xizmat</a>
+            <!-- <a href="lang/researches" class="stick__center--link">tadqiqot</a> -->
+            <!-- <a href="lang/news" class="stick__center--link">yangi</a> -->
+            <a href="lang/contacts" class="stick__center--link">aloqa</a>
+            <div class="stick__center--dropdown stick__center--link">
+                <a class="dropmain">info <i class="fas fa-caret-down"></i></a>
+                <div class="droping">
+                    <a href="lang/exim" class="droping__element">exim </a>
+                    <a href="lang/certificates" class="droping__element">certificates</a>
+                    <a href="lang/quvvat" class="droping__element">quvvat</a>
+                    <a href="lang/quest" class="droping__element">quest</a>
+                </div>
+            </div>
+            
+            <div class="stick__center--dropdown stick__center--link stick__center--lang">
+                <a class="dropmain">lan <i class="fas fa-caret-down"></i></a>
+                <div class="droping">
+                    <a href="/ru" class="droping__element">Ru</a>
+                    <a href="/uz" class="droping__element">Uz</a>
+                    <a href="/en" class="droping__element">En</a>
+                </div>
+            </div>
+            <a href="/admin" class="sets"><i class="fas fa-users-cog admin__icon"></i></a>
+        </div>
+        <div class="stick__btn mybtn" onclick="dqs('.reg').classList.add('active');">contactus</div>
+        <div class="burger">
+            <i class="fas fa-bars open" style="color: white;"></i>
+            <i class="fas fa-times close" style="color: white;"></i>
+        </div>
+        <div class="stick__menu">
+            <div class="stick__mid">
+                <a href="lang/" class="stick__menu--link">main</a>
+                <a href="lang/aboutus" class="stick__menu--link">about</a>
+                <a href="lang/structure" class="stick__menu--link">struct</a>
+                <a href="lang/headStuff" class="stick__menu--link">head_stuff</a>
+                <a href="lang/documents" class="stick__menu--link">hujjat</a>
+                <a href="lang/services" class="stick__menu--link">xizmat</a>
+                <!-- <a href="lang/researches" class="stick__menu--link">tadqiqot</a> -->
+                <!-- <a href="lang/news" class="stick__menu--link">yangi</a> -->
+                <a href="lang/contacts" class="stick__menu--link">aloqa</a>
+                <a href="lang/exim" class="stick__menu--link">expimp</a>
+                <a href="lang/certificates" class="stick__menu--link">certificates</a>
+                <a href="lang/quvvat" class="stick__menu--link">quvvat</a>
+                <a href="lang/quest" class="stick__menu--link">quest</a>
+                <div class="r">
+                    <a href="/ru" class="rel">Ru</a>
+                    <a href="/uz" class="rel">Uz</a>
+                    <a href="/en" class="rel">En</a>
+                </div>
+                <a href="/admin" class="sets"><i class="fas fa-users-cog admin__icon"></i></a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="reg">
+    <div class="con">
+        <form action="lang/" method="POST">
+            <i class="fas fa-times"style="color:#e60707" onclick="dqs('.reg').classList.remove('active')"></i>
+            <div class="labeler">
+                <input class="labeler__input" type="text" name="name" onchange="checklabel(this)">
+                <div class="labeler__placeholder">your_name</div>
+            </div>
+            <div class="labeler">
+                <input class="labeler__input" required pattern="[+]?[0-9]{7,13}" type="tel" name="tel" onchange="checklabel(this)">
+                <div class="labeler__placeholder">your_tel</div>
+            </div>
+            <input name="type" type="hidden" value="tel">
+            <button type="submit" class="reg__btn mybtn">contactus</button>
+        </form>
+    </div>
+</section>

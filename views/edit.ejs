@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('header'); -%>
+</head>
+<body>
+    <%- include('allblocks/header'); -%>
+
+    <%- include('allblocks/info', {name: "Administrator > " + id}); -%>
+
+    <%- include('admin/editbody'); -%>
+
+    <%- include('allblocks/footer') -%>
+</body>
+<script src="/js/js.js"></script>
+</html>

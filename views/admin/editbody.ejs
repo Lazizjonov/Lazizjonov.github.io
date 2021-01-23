@@ -1,0 +1,100 @@
+<section class="admin">
+    <script src="/ckeditor/ckeditor.js"></script>
+    <div class="con">
+
+        <% rows.forEach(row => { %>
+
+            <form method="POST" action="/admin/<%= id %>/" class="admin__form" encType="multipart/form-data">
+                <div class="admin__col">
+
+                    <% for( i = 0; i < fields.length; i++) { %>
+
+                        <div class="admin__colel">
+                            <div class="admin__title"><%= fields[i] %></div>
+                            <div class="admin__body">
+            
+                                <% if(types[i] === 'textarea') {%>
+                                    <% if (fields[i] === primary) { %>
+
+                                        <textarea 
+                                            readonly="readonly"
+                                            name="<%= fields[i] %>" 
+                                            placeholder="<%= types[i] %>" 
+                                            required><%= row[fields[i]] %></textarea>
+
+                                    <% } else{ %>
+
+                                        <textarea 
+                                            id="<%= fields[i] %>" 
+                                            name="<%= fields[i] %>" 
+                                            placeholder="<%= types[i] %>" 
+                                            required><%= row[fields[i]] %></textarea>
+                                            <script>
+                                                CKEDITOR.replace( '<%= fields[i] %>' );
+                                            </script>
+
+
+                                    <% } %>
+                                <% }else if(types[i] === 'text'){ %>
+                                    <% if (fields[i] === primary) { %>
+
+                                        <textarea 
+                                            readonly="readonly"
+                                            name="<%= fields[i] %>" 
+                                            placeholder="<%= types[i] %>" 
+                                            required><%= row[fields[i]] %></textarea>
+
+                                    <% } else{ %>
+
+                                        <textarea 
+                                            id="<%= fields[i] %>" 
+                                            name="<%= fields[i] %>" 
+                                            placeholder="<%= types[i] %>" 
+                                            required><%= row[fields[i]] %></textarea>
+
+                                    <% } %>
+                                <% }else if(types[i] === 'file'){ %> 
+
+                                    <input 
+                                        type="file"
+                                        name="<%= fields[i] %>"/>
+
+                                <% }else{ %> 
+                                    <% if (fields[i] === primary) { %>
+
+                                        <input 
+                                            readonly="readonly"
+                                            type="<%= types[i] %>" 
+                                            placeholder="<%= types[i] %>" 
+                                            name="<%= fields[i] %>" 
+                                            value="<%= row[fields[i]] %>"
+                                            required/>
+
+                                    <% } else{ %>
+
+                                        <input 
+                                            type="<%= types[i] %>" 
+                                            placeholder="<%= types[i] %>" 
+                                            name="<%= fields[i] %>" 
+                                            value="<%= row[fields[i]] %>"
+                                            required/>
+                                            
+                                    <% } %>
+                                <% } %> 
+                            </div>     
+                        </div>
+
+                    <% } %>
+
+                </div>
+                <div class="admin__edit">
+                    <input type="hidden" name="csrf" value="<%= token %>">
+                    <input type="hidden" name="reqtype" value="edit">
+                    <button type="submit"><i class="fas fa-plus"></i></button>
+                </div>
+            </form>
+
+        <% }) %>
+
+    </div>
+</section>

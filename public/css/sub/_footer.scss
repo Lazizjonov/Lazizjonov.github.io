@@ -1,0 +1,124 @@
+
+.footer{
+    font-size: 13px;
+
+    .con{
+        @include respond-900(){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            text-align: center;
+        }
+        @include respond-600{
+            flex-direction: column;
+            text-align: center;
+            display: flex;
+        }
+    }
+
+    @include respond-600{
+        font-size: 12px;
+    }
+
+    &__form{
+        position: relative;
+        width: 300px;
+        height: 40px;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-around;
+
+
+        input{
+            width: calc(100% - 90px);
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-size: 18px;
+            outline: none;
+            border: none;
+            border-bottom: 0.5px solid black;
+            position: relative;
+        }
+
+        button{
+            width: 70px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+
+    &__logo{
+        width: 100%;
+
+        @include respond-900{
+            padding-bottom: 0px;
+        }
+    }
+
+    &__el{
+        max-width: 350px;
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include respond-900{
+            height: auto;
+            width: 100%;
+            align-items: center;
+            padding: 5px 20px;
+        }
+
+        h5{
+            font-size: 18px;
+            font-weight: 500;
+            color: #001D38;
+            margin-bottom: 40px;
+
+            @include respond-900{
+                margin-bottom: 10px;
+            }
+        }
+        
+        p{
+            color: #727272;
+        }
+
+        a{
+            color: #727272;
+            padding-bottom: 15px;
+
+            @include respond-900{
+                padding-bottom: 3px;
+            }
+
+            &:hover{
+                color: #43a7ff;
+            }
+        }
+
+        i{
+            font-size: 25px;
+        }
+
+        &--links{
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 30px;
+
+            @include respond-900{
+                padding-top: 10px;
+            }
+
+            img{
+                width: 40px;
+            }
+        }
+    }
+}

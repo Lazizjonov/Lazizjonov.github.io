@@ -1,0 +1,99 @@
+@mixin respond-900 {
+    @media screen and (max-width: 900px) { @content }
+};
+@mixin respond-600 {
+    @media screen and (max-width: 600px) { @content }
+};
+@mixin respond-1200 {
+    @media screen and (min-width: 1200px) { @content }
+};
+
+
+$base-color: #9fff5d;
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+}
+::-webkit-scrollbar-thumb {
+    background: #00af3a; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #00cf11; 
+}
+
+@font-face{
+    font-family: 'pop';
+    src: url('/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+@keyframes come_left{
+    0%{ left: -100%; }
+    100%{ left: 0; }
+}
+
+@keyframes come_right{
+    0%{ left: 100%; }
+    100%{ left: 0; }
+}
+
+@keyframes go_left{
+    0%{ left: 0; }
+    100%{ left: -100%; }
+}
+
+@keyframes go_right{
+    0%{ left: 0; }
+    100%{ left: 100%; }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+body{
+    font-family: 'pop';
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.con{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond-600{
+        max-width: 600px;
+    }
+    @include respond-900{
+        max-width: 900px;
+    }
+    @include respond-1200{
+        max-width: 1500px;
+    }
+}
+
+@import 'sub/prel';
+@import 'sub/slider';
+@import 'sub/stickmenu';
+@import 'sub/burger';
+@import 'sub/footer';
+@import 'sub/admin';

@@ -1,0 +1,22 @@
+<section class="admin">
+    <div class="con">
+        <% var tables = result; %> 
+
+        <% tables.forEach(table => { %>
+
+            <a href="/admin/<%= table[Object.keys(table)[0]] %>" class="admin__dev"><%= table[Object.keys(table)[0]] %></a> 
+        
+        <% }) %>
+
+        <!-- <a href="/admin/1" class="admin__dev">Slider</a>
+        <a href="/admin/2" class="admin__dev">Iamges</a>
+        <a href="/admin/3" class="admin__dev">Contacts</a>
+        <a href="/admin/4" class="admin__dev">Social links</a>
+        <a href="/admin/5" class="admin__dev">Iamges</a>
+        <a href="/admin/6" class="admin__dev">Iamges</a>
+        <a href="/admin/7" class="admin__dev">Iamges</a>
+        <a href="/admin/8" class="admin__dev">Iamges</a>
+        <a href="/admin/9" class="admin__dev">Iamges</a>
+        <a href="/admin/10" class="admin__dev">Iamges</a> -->
+    </div>
+</section>

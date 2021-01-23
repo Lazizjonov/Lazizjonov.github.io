@@ -1,0 +1,66 @@
+<section class="admin">
+    <div class="con">
+        <% const last = array=>array[array.length - 1]; %> 
+        <% rows.forEach(row => { %>
+            
+            <div class="admin__dev">
+                <div class="admin__edit">
+                    <a href="/admin/<%= id %>/<%= row[primary] %>"><i class="far fa-edit"></i></a>
+                    <form method="POST" action="/admin/<%= id %>/" encType="multipart/form-data">
+                        <i onclick="this.parentElement.submit()" class="far fa-trash-alt"></i>
+                        <input type="<%= primtype %>" name="<%= primary %>" value="<%= row[primary] %>" style="display: none;">
+                        <input type="hidden" name="csrf" value="<%= token %>">
+                        <input type="hidden" name="reqtype" value="del">
+                    </form>
+                </div>
+                <div class="admin__row">
+
+                    <% fields.forEach((field, i) => { %>
+                        <% if (types[i] === "file" && /\.png$|\.jpeg$|\.jpg$|\.webp$/.test( row[field].toLowerCase() )) { %>
+                            <div class="admin__tblel">
+                                <div class="admin__colname"><%= field %></div>
+                                <div class="admin__image">
+                                    <img src="<%= row[field] %>" alt="">
+                                </div>
+                            </div>
+                        <% }else{ %>
+                            <div class="admin__tblel">
+                                <div class="admin__colname"><%= field %></div>
+                                <div class="admin__text"><%= row[field] %></div>     
+                            </div>
+                        <% } %> 
+                    <% }) %>
+                
+                </div>
+            </div>
+ 
+        <% }) %>
+        <!-- <form method="POST" action="/admin/<%= id %>/" class="admin__dev" encType="multipart/form-data">
+            <div class="admin__edit">
+                <input type="hidden" name="csrf" value="<%= token %>">
+                <input type="hidden" name="reqtype" value="ins">
+                <button type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="admin__row">
+
+                <% for( i = 0; i < fields.length; i++) { %>
+
+                    <div class="admin__tblel">
+                        <div class="admin__colname"><%= fields[i] %></div>
+                        <div class="admin__text">
+                            <% if(types[i] === 'text') {%>
+                                <textarea name="<%= fields[i] %>" placeholder="<%= types[i] %>" style="width: 100%; height: 100%;" required></textarea> 
+                            <% }else{ %> 
+                                <input type="<%= types[i] %>" placeholder="<%= types[i] %>" name="<%= fields[i] %>" required>
+                            <% } %> 
+                        </div>     
+                    </div>
+
+                <% } %>
+            </div>
+        </form> -->
+    </div>
+    <div class="con">
+        <a href="/admin/<%= id %>/new" class="admin__add">+</a>
+    </div>
+</section>
