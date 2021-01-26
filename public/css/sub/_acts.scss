@@ -1,0 +1,48 @@
+.acts{
+    overflow: visible;
+    transform: translateY(-100px);
+    margin-bottom: -100px;
+
+    &__ge{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__gc{
+        width: calc(100% - 40px);
+        height: 300px;
+        transition: all 0.3s;
+        margin: 20px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.2rem;
+        flex-direction: column;
+
+        & *{
+            z-index: 1;
+        }
+
+        &::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            background-color: #27272771;
+            transition: all 0.4s;
+        }
+
+        &:hover{
+            &::before{
+                background-color: #00ad0ae0;
+            }
+        }
+    }
+}

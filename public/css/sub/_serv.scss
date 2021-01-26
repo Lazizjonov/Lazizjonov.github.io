@@ -1,0 +1,44 @@
+.serv{
+    margin: 70px 0;
+
+    &__ge{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    &__gc{
+        width: calc(100% - 40px);
+        margin: 20px;
+        text-align: right;
+
+        &--header{
+            font-size: 3rem;
+            transform: translateX(100px);
+            display: flex;
+            justify-content: flex-end;
+
+            h1{
+                background-color: #23af009a;
+                padding: 40px;
+                color: white;
+            }
+        }
+
+        &--textp{
+            margin: 0px -100px 20px 0px;
+            padding: 10px;
+            background-color: #e6e6e6;
+            color: black;
+            position: relative;
+        }
+
+        &--image{
+            img{
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+    }
+}

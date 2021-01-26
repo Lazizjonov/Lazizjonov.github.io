@@ -10,6 +10,7 @@
 
 
 $base-color: #9fff5d;
+$primary-1: #2ba837;
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -97,3 +98,7 @@ section{
 @import 'sub/burger';
 @import 'sub/footer';
 @import 'sub/admin';
+@import 'sub/acts';
+@import 'sub/bas';
+@import 'sub/serv';
+@import 'sub/sas';
