@@ -31,6 +31,11 @@ $primary-1: #2ba837;
     font-display: swap;
 }
 
+@font-face{
+    font-family: 'monstr';
+    src: url('/fonts/monstr/Montserrat-Regular.ttf') format('truetype');
+    font-display: swap;
+}
 
 @keyframes come_left{
     0%{ left: -100%; }
@@ -60,7 +65,7 @@ $primary-1: #2ba837;
 }
 
 body{
-    font-family: 'pop';
+    font-family: 'monstr';
 }
 
 a{

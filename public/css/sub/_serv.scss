@@ -1,10 +1,18 @@
 .serv{
     margin: 70px 0;
 
+    @include respond-600{
+        margin: 10px 0;
+    }
+
     &__ge{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
+
+        @include respond-600{
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__gc{
@@ -12,16 +20,31 @@
         margin: 20px;
         text-align: right;
 
+        @include respond-600{
+            width: calc(100% - 20px);
+            margin: 10px;
+            text-align: center;
+        }
+
         &--header{
             font-size: 3rem;
             transform: translateX(100px);
             display: flex;
             justify-content: flex-end;
 
+            @include respond-600{
+                transform: none;
+                justify-content: center;
+            }
+
             h1{
                 background-color: #23af009a;
                 padding: 40px;
                 color: white;
+                
+                @include respond-600{
+                    width: 100%;
+                }
             }
         }
 
@@ -31,6 +54,11 @@
             background-color: #e6e6e6;
             color: black;
             position: relative;
+            line-height: 1.5rem;
+
+            @include respond-600{
+                margin: 0px 0px 20px 0px;
+            }
         }
 
         &--image{

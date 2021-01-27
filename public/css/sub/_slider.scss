@@ -26,6 +26,18 @@
             left: 0;
         }
 
+        &--text{
+            max-width: 550px;
+            font-size: 20px;
+            line-height: 28px;
+            color: white;
+
+            @include respond-600{
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+
         h3{
             font-size: 60px;
             letter-spacing: 2px;

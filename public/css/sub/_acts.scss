@@ -3,10 +3,21 @@
     transform: translateY(-100px);
     margin-bottom: -100px;
 
+    
+    @include respond-600{
+        transform: translate(0);
+        margin-bottom: 0;
+    }
+
     &__ge{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+
+        @include respond-600{
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 10px;
+        }
     }
 
     &__gc{
@@ -24,6 +35,16 @@
         color: white;
         font-size: 1.2rem;
         flex-direction: column;
+
+        @include respond-900{
+            width: calc(100% - 10px);
+            margin: 5px;
+        }
+
+        @include respond-600{
+            margin: 10px;
+            width: calc(100% - 20px);
+        }
 
         & *{
             z-index: 1;

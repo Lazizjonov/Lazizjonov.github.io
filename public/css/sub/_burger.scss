@@ -3,15 +3,18 @@
 .simple__btn{
     padding: 10px 20px;
     transition: all 0.5s;
+    width: fit-content;
+    cursor: pointer;
+    
 
-    color: #0d9e00;
-    border: 0.5px solid #6bcf84;
-    background-color: #fff;
+    color: #0a7201;
+    border: 0.5px solid #2db950;
+    background-color: rgb(247, 247, 247);
 
     &:hover{
         color: rgb(255, 255, 255);
         border: 0.5px solid #2c2c2c;
-        background-color: #6bff5d;
+        background-color: #0b8500;
     }
 }
 
@@ -24,7 +27,7 @@
     z-index: 1;
 
     @include respond-600{
-        font-size: 12px;
+        font-size: 14px;
         padding: 8px 10px;
     }
 

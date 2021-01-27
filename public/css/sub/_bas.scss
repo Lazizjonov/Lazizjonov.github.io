@@ -1,12 +1,20 @@
 .bas{
     margin-top: 50px;
 
+    @include respond-600{
+        margin-top: 10px;
+    }
+
     &__ge{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin: 0 20px;
         justify-items: center;
+
+        @include respond-600{
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__gc{
@@ -18,8 +26,13 @@
         padding: 50px 20px;
         cursor: pointer;
         transition: all 0.2s linear;
+        line-height: 1.4rem;
         
         background-color: #34343511;
+
+        @include respond-600{
+            padding: 20px;
+        }
 
         i{
             font-size: 50px;
@@ -28,10 +41,24 @@
         h1, p, h2, h3, h4, h5, h6{
             transition: all 0.2s linear, color 0.2s linear;
             transform: translateY(20px);
+
+            @include respond-600{
+                transform: translateY(0px);
+            }
         }
 
         &:nth-child(odd){
             background-color: #34343520;
+        }
+        
+        @include respond-600{
+            &:nth-child(1), &:nth-child(4){
+                background-color: #34343520;
+            }
+            &:nth-child(2), &:nth-child(3){
+                 background-color: #34343511;
+            }
+           
         }
 
         &:hover{
