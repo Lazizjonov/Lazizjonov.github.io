@@ -1,6 +1,18 @@
 .sas{
     margin-top: 50px;
 
+    .con{
+        flex-direction: column;
+    }
+
+    &__gh{
+        font-size: 2.5rem;
+        background-color: $primary-1;
+        color: white;
+        padding: 15px 30px;
+        margin-bottom: -30px;
+    }
+
     &__ge{
         display: grid;
         grid-template-columns: repeat(3, 1fr);

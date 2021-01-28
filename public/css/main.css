@@ -865,7 +865,7 @@ section {
 }
 
 .stick__center--dropdown .droping__element {
-  width: 240px;
+  width: 100px;
   padding: 10px 10px;
 }
 
@@ -1953,6 +1953,21 @@ section {
 
 .sas {
   margin-top: 50px;
+}
+
+.sas .con {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sas__gh {
+  font-size: 2.5rem;
+  background-color: #2ba837;
+  color: white;
+  padding: 15px 30px;
+  margin-bottom: -30px;
 }
 
 .sas__ge {

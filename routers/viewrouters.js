@@ -10,9 +10,9 @@ router.get('/', (req, res)=>{
     res.status(200).render(     'main',         {lang: req.baseUrl,     dbase: req.database,    text: req.lang,      req_time: req.req_start-req.req_end});
 });
 
-// router.get('/services', (req, res)=>{
-//     res.status(200).render(     'services',     {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
-// });
+router.get('/contacts', (req, res)=>{
+    res.status(200).render(     'contacts',     {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
+});
 // router.get('/contacts', (req, res)=>{
 //     res.status(200).render(     'contacts',     {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
 // });
