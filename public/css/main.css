@@ -1322,6 +1322,7 @@ section {
 
 .footer__logo {
   width: 100%;
+  max-width: 150px;
 }
 
 @media screen and (max-width: 900px) {
