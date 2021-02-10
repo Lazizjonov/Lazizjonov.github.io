@@ -1,6 +1,10 @@
 .bas{
     margin-top: 50px;
 
+    .con{
+        flex-direction: column;
+    }
+
     @include respond-600{
         margin-top: 10px;
     }

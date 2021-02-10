@@ -1,56 +1,16 @@
 <section class="slider">
-    <div class="slider__elem active" style="background-image: linear-gradient(#444444b3, #0000006e), 
-    linear-gradient( to right, #4343438a, #43434300, #484848b3), url(/imgs/default-1.jpg);">
-        <div class="con">
-            <h3 class="slider__elem--header">h3 text</h3>
-            <div class="slider__elem--text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Eum tempora nisi eius pariatur sint asperiores nam id 
-                    perferendis, error rem iusto quas hic repellat ea laborum 
-                    ratione nulla quae quisquam?</p>
+    <% dbase.slider.forEach(el => { %>
+        <div class="slider__elem" style="background-image: linear-gradient(#444444b3, #0000006e), 
+        linear-gradient( to right, #4343438a, #43434300, #484848b3), url('<%= el.img %>');">
+            <div class="con">
+                <h1 class="slider__elem--header"><%= el['name_' + text.lan] %></h1>
+                <div class="slider__elem--text">
+                    <p><%= el['desc_' + text.lan] %></p>
+                </div>
+                <a href="<%= lang %>/projects/<%= el.id %>" class="mybtn slider__elem--btn"><%= text.more %></a>
             </div>
-            <a href="" class="mybtn slider__elem--btn">ahref</a>
         </div>
-    </div>
-    <div class="slider__elem" style="background-image: linear-gradient(#444444b3, #0000006e), 
-    linear-gradient( to right, #4343438a, #43434300, #484848b3), url(/imgs/default-2.jpg);">
-        <div class="con">
-            <h3 class="slider__elem--header">h3 text</h3>
-            <div class="slider__elem--text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Eum tempora nisi eius pariatur sint asperiores nam id 
-                    perferendis, error rem iusto quas hic repellat ea laborum 
-                    ratione nulla quae quisquam?</p>
-            </div>
-            <a href="" class="mybtn slider__elem--btn">ahref</a>
-        </div>
-    </div>
-    <div class="slider__elem" style="background-image: linear-gradient(#444444b3, #0000006e), 
-    linear-gradient( to right, #4343438a, #43434300, #484848b3), url(/imgs/default-3.jpg);">
-        <div class="con">
-            <h3 class="slider__elem--header">h3 text</h3>
-            <div class="slider__elem--text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Eum tempora nisi eius pariatur sint asperiores nam id 
-                    perferendis, error rem iusto quas hic repellat ea laborum 
-                    ratione nulla quae quisquam?</p>
-            </div>
-            <a href="" class="mybtn slider__elem--btn">ahref</a>
-        </div>
-    </div>
-    <div class="slider__elem" style="background-image: linear-gradient(#444444b3, #0000006e), 
-    linear-gradient( to right, #4343438a, #43434300, #484848b3), url(/imgs/default-4.jpg);">
-        <div class="con">
-            <h3 class="slider__elem--header">h3 text</h3>
-            <div class="slider__elem--text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Eum tempora nisi eius pariatur sint asperiores nam id 
-                    perferendis, error rem iusto quas hic repellat ea laborum 
-                    ratione nulla quae quisquam?</p>
-            </div>
-            <a href="" class="mybtn slider__elem--btn">ahref</a>
-        </div>
-    </div>
+    <% }) %>
         
     <div class="slider__btn left" onclick="slide__left('slider__elem');">
         <i class="fas fa-angle-left"></i>
@@ -58,4 +18,11 @@
     <div class="slider__btn right" onclick="slide__right('slider__elem');">
         <i class="fas fa-angle-right"></i>
     </div>
+    <script>
+        if(document.querySelector(".slider__elem")){
+            if(!document.querySelector(".slider__elem.active")){
+                document.querySelector(".slider__elem").classList.add("active");
+            }
+        }
+    </script>
 </section>

@@ -104,6 +104,16 @@
 
         i{
             font-size: 25px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a{
+            display: flex;
+            align-items: center;
         }
 
         &--links{

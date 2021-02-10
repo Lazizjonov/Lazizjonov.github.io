@@ -9,13 +9,28 @@ const filesys_en = require('../langs/filesys_en.json');
     *all files should contain same json keys
 */
 
+function jsonify(arr,l){
+    var retJSON = {}
+    arr.forEach(el => {
+        retJSON[el.name] = el[l];
+    });
+    return retJSON;
+}
+
 module.exports = async (req, res, next)=>{
+    var lan = {};
 
     /* Testing the time to get all data from database */
     req.req_start = new Date().getTime();
 
     /* getting tables from database */
     const images = await dbase('SELECT * FROM `images`');
+    const lang = await dbase('SELECT * FROM `lang`');
+    const slider = await dbase('SELECT * FROM `slider`');
+    const services = await dbase('SELECT * FROM `services`');
+    const contacts = await dbase('SELECT * FROM `contacts`');
+    const socials = await dbase('SELECT * FROM `socials`');
+    const projects = await dbase('SELECT * FROM `projects`');
 
     
     req.req_end = new Date().getTime();
@@ -40,18 +55,22 @@ module.exports = async (req, res, next)=>{
     
     /* 
         getting language as request language
+
+        getting lang table as json
     */
 
     var filesys = {};
 
     if(req.baseUrl === "/uz" || req.baseUrl === "/admin"|| req.baseUrl === "/"){
         filesys = filesys_uz;
+        lan = jsonify(lang, "uz");
     }else if(req.baseUrl === "/ru"){
         filesys = filesys_ru;
+        lan = jsonify(lang, "ru");
     }else if(req.baseUrl === "/en"){
         filesys = filesys_en;
+        lan = jsonify(lang, "en");
     }
-
     
     
     /* 
@@ -61,9 +80,14 @@ module.exports = async (req, res, next)=>{
     */
 
     req.database = {
-        images: images, 
+        slider: slider,
+        images: images,
+        services: services,
+        contacts: contacts,
+        socials: socials,
+        projects: projects,
         elem: elem
     };
-    req.lang = filesys;
+    req.lang = {...filesys, ...lan};
     next();
 }

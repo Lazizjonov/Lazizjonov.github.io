@@ -1,0 +1,25 @@
+<section class="sas">
+    <div class="con">
+        <div class="sas__gh">
+            <a href=""><%= text.projects %></a>
+        </div>
+        <div class="sas__ge">
+            <% dbase.projects.forEach(el => { %>
+                <div class="sas__gc">
+                    <div class="sas__gc--img">
+                        <img src="<%= el.image_1 %>" alt="idns house project">
+                    </div>
+                    <div class="sas__gc--header">
+                        <h2><%= el["name_" + text.lan] %></h2>
+                    </div>
+                    <div class="sas__gc--text">
+                        <p><%= el["desc_" + text.lan] %></p>
+                    </div>
+                    <a href="<%= lang %>/projects/<%= el.id %>" class="sas__gc--btn simple__btn">
+                        <%= text.more %> 
+                    </a>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

@@ -13,6 +13,19 @@ router.get('/', (req, res)=>{
 router.get('/contacts', (req, res)=>{
     res.status(200).render(     'contacts',     {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
 });
+
+router.get('/projects', (req, res)=>{
+    res.status(200).render(     'projects',     {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
+});
+
+router.get('/projects/:id', (req, res)=>{
+    res.status(200).render(     'simplepage',   {lang: req.baseUrl,     dbase: req.database,    text: req.lang,     id: req.params.id,      page: "projects"});
+});
+
+router.get('/services/:id', (req, res)=>{
+    res.status(200).render(     'servpage',   {lang: req.baseUrl,     dbase: req.database,    text: req.lang,     id: req.params.id});
+});
+
 // router.get('/contacts', (req, res)=>{
 //     res.status(200).render(     'contacts',     {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
 // });

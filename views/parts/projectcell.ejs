@@ -1,0 +1,45 @@
+
+
+<section class="simplepage">
+    <div class="con">
+        <div class="simplepage__ge" 
+            
+            <% if (x.hasOwnProperty('img')) { %>
+                style="background-image: url('<%= x.img %>');"
+            <% } else { %>
+                style="background-image: url('/imgs/default-3.jpg');"
+            <% } %>
+            >
+            
+            <% if (x.hasOwnProperty('image_1')) { %>
+                <div class="simplepage__sli">
+                    <div class="simplepage__sli--el active">
+                        <img src="<%= x.image_1 %>">
+                    </div>
+                    <div class="simplepage__sli--el">
+                        <img src="<%= x.image_2 %>">
+                    </div>
+                    <div class="simplepage__sli--el">
+                        <img src="<%= x.image_3 %>">
+                    </div>
+
+            
+                    <div class="slider__btn left" onclick="slide__left('simplepage__sli--el');">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="slider__btn right" onclick="slide__right('simplepage__sli--el');">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            <% } %>
+            
+            <div class="simplepage__ge--head">
+                <h1><%= x['name_' + text.lan] %></h1>
+                <p><%= x['desc_' + text.lan] %></p>
+            </div>
+        </div>
+        <div class="simplepage__gc">
+            <%- x['fulltext_' + text.lan] %> 
+        </div>
+    </div>
+</section>

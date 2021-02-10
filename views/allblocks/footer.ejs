@@ -4,37 +4,31 @@
             <a href="lang/">
                 <img src="/imgs/logo/logo-vert-black.png" alt="black logo of tadqiqotlar markazi" class="footer__logo">
             </a>
-            <a href="">shower</a>
-            <a href="">shower</a>
-            <a href="">addr</a>
+            <% dbase.contacts.forEach(el => { %>
+                <a href="<%= el.link%> "><%- el.icon %> <%= el["shower_" + text.lan] %></a>
+            <% }) %>
             <div class="footer__el--links">
-                <a href="">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                <% dbase.socials.forEach(el => { %>
+                    <a href="<%= el.link %>">
+                        <%- el.icon %>
+                    </a>
+                <% }) %>
             </div>
         </div>
         <div class="footer__el">
-            <h5>text.xizmat</h5>
-                <a href="">dbase</a>
-                <a href="">dbase</a>
-                <a href="">dbase</a>
-                <a href="">dbase</a>
-                <a href="">dbase</a>
+            <h5><%= text.services %></h5>
+            <% dbase.services.forEach(el => { %>
+                <a href="<%= lang %>/services/<%= el.id %>"><%= el["name_" + text.lan] %></a>
+            <% }) %>
         </div>
         <div class="footer__el">
-            <h5>text.sms</h5>
+            <h5><%= text.sms %></h5>
             <form action="lang/" method="POST" class="footer__form">
                 <input name="email" type="email" placeholder="E-mail" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$' required>
-                <button type="submit" class="simple__btn">Yoqish</button>
+                <button type="submit" class="simple__btn"><%= text.turnon %></button>
                 <input name="type" type="hidden" value="mail">
             </form>
-            <p>E-mail xabarnoma yoqish bilan siz IDNS-GROUP yangilik va xabarnomalarini elektron pochtangizga jo'natilishiga rozilik bildirasiz</p>
+            <p><%= text.mailing %></p>
         </div>
     </div>
 </section>

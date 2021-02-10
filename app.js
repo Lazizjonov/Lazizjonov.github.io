@@ -29,7 +29,7 @@ app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000,                  // cookie's lifespan
     sameSite: 'lax',                              // controls when cookies are sent
     path: '/',                                    // explicitly set this for security purposes
-    secure: process.env.NODE_ENV === 'production',// cookie only sent on HTTPS
+    //secure: process.env.NODE_ENV === 'production',// cookie only sent on HTTPS
     httpOnly: true                                // cookie is not available to JavaScript (client)
 }));
 
@@ -37,9 +37,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileUpload());
 
 
-app.use(/\/uz|\/ru|\/en|\/admin|\//, query);
+app.use(/\/uz|\/ru|\/admin|\//, query);
 
-app.use(/\/uz|\/ru|\/en/, mainrouter);
+app.use(/\/uz|\/ru/, mainrouter);
 app.use('/admin', (req, res, next)=>{
     if ( req.session.csrf === undefined ) {
         if ( req.method === "POST" && req.body.login === "LaZiZjOnOv" && req.body.pass === "PaSsWoRd" ){

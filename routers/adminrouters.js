@@ -72,14 +72,6 @@ router.get('/:id/', async (req, res)=>{
 
 router.post('/:id/', async (req, res)=>{
 
-    if (!req.body.csrf) {
-        return res.sendStatus(401);
-    }
-    
-    if (req.body.csrf !== req.session.csrf) {
-        return res.sendStatus(401);
-    }
-
     try{
         const rownames = await dbase("SHOW columns FROM " + req.params.id);
         var rows = await dbase("SELECT * from " + req.params.id);
@@ -145,7 +137,7 @@ router.post('/:id/', async (req, res)=>{
             const answer = await dbase(`
                 UPDATE ${req.params.id}
                 SET ? 
-                WHERE ${primary} = ${req.body[primary]};
+                WHERE ${primary} = '${req.body[primary]}';
             `,quer);
         }
 
@@ -171,6 +163,7 @@ router.post('/:id/', async (req, res)=>{
 });
 
 router.get('/:id/:col/', async (req, res)=>{
+
     //console.log(req.params);
     if(req.params.col === "new"){
         try{
@@ -189,7 +182,7 @@ router.get('/:id/:col/', async (req, res)=>{
                 }
             });
 
-            //const rows = await dbase(`SELECT * FROM ${req.params.id} WHERE ${primary}=${req.params.col}`);
+            // const rows = await dbase(`SELECT * FROM ${req.params.id} WHERE ${primary}=${req.params.col}`);
             // console.log(rows);
             // res.sendStatus(200);
             //console.log(rownames);
@@ -226,8 +219,9 @@ router.get('/:id/:col/', async (req, res)=>{
                     primtype = row.Type;
                 }
             });
+            // console.log(`SELECT * FROM ${req.params.id} WHERE ${primary}='${req.params.col}'`);
 
-            const rows = await dbase(`SELECT * FROM ${req.params.id} WHERE ${primary}=${req.params.col}`);
+            const rows = await dbase(`SELECT * FROM ${req.params.id} WHERE ${primary}='${req.params.col}'`);
             // console.log(rows);
             // res.sendStatus(200);
             //console.log(rownames);

@@ -1,0 +1,68 @@
+.simplepage{
+    margin: 50px 0;
+
+    .con{
+        flex-direction: column;
+        padding: 60px;
+        box-shadow: 0 0 8px #c0c0c0a1;
+        margin: 20px 0;
+
+        @include respond-900{
+            padding: 20px;
+        }
+    }
+
+    .slider__btn.right{
+        right: 0px;
+    }
+
+    .slider__btn.left{
+        left: 0px;
+    }
+
+    &__ge{
+        width: 100%;
+        min-height: 600px;
+        background-size: cover;
+        position: relative;
+        background-position: center;
+        margin: 20px 0;
+
+        &--head{
+            font-size: 1.4rem;
+            width: 600px;
+            max-width: calc(100% - 80px);
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            background-color: #006b009d;
+            color: white;
+            padding: 40px;
+        }
+    }
+
+    &__sli{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &--el{
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+
+            &.active{
+                left: 0;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

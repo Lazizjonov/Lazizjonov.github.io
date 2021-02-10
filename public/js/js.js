@@ -117,7 +117,7 @@ function slide__left(name){
         clearTimeout(timer);
     }
     timer = setTimeout(()=>{
-        slide__right('slider__elem');
+        slide__right(name);
     }, 6000);
 }
 
@@ -139,7 +139,7 @@ function slide__right(name){
         clearTimeout(timer);
     }
     timer = setTimeout(()=>{
-        slide__right('slider__elem');
+        slide__right(name);
     }, 6000);
 }
 

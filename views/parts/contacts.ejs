@@ -2,12 +2,21 @@
     <div class="con">
         <div class="conts__ge">
             <div class="conts__gc">
-                <div class="conts__el">
-                    
+            
+                <% dbase.contacts.forEach(el => { %>
+                    <a href="<%= el.link%> "><%- el.icon %> <%= el["shower_" + text.lan] %></a>
+                <% }) %>
+                <div class="conts__gc--links">
+                    <% dbase.socials.forEach(el => { %>
+                        <a href="<%= el.link %>">
+                            <%- el.icon %>
+                        </a>
+                    <% }) %>
                 </div>
+                
             </div>
             <div class="conts__gc">
-                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1498.4943963109918!2d69.24268318366468!3d41.30910742206401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzMyLjgiTiA2OcKwMTQnMzYuNSJF!5e0!3m2!1sen!2s!4v1612695799950!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
     </div>

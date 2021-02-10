@@ -1,7 +1,19 @@
-<section class="bas">
+<section class="bas" id="services">
     <div class="con">
+        <div class="sas__gh">
+            <a>Xizmatlar</a>
+        </div>
         <div class="bas__ge">
-            <div class="bas__gc">
+            <% dbase.services.forEach(el => { %>
+                <a href="<%= lang %>/services/<%= el.id %>" class="bas__gc">
+                    <div class="bas__gc--ci">
+                        <%- el.icon %> 
+                    </div>
+                    <h1><%= el['name_' + text.lan] %></h1>
+                    <p><%= el['desc_' + text.lan] %></p>
+                </a>
+            <% }) %>
+            <!-- <div class="bas__gc">
                 <div class="bas__gc--ci">
                     <i class="fas fa-drafting-compass"></i>
                 </div>
@@ -28,7 +40,7 @@
                 </div>
                 <h1>Tejamkor qurilish</h1>
                 <p>Qurilishni sifatli va chidamli loyihalash bilan birga mahsulotlardan tejamkor foydalanish</p>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

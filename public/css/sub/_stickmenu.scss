@@ -85,11 +85,15 @@
         color: #fff;
         font-size: 14px;
         font-weight: bold;
-        display: inline-block;
         padding: 0px 0px 0px 0px;
         font-family: "Poppins", sans-serif;
         position: relative;
         display: flex;
+        width: calc(100% - 500px);
+        justify-content: space-around;
+        height: 50px;
+        align-items: center;
+
 
         @include respond-900{
             display: none;
@@ -110,6 +114,9 @@
             align-items: center;
             text-align: center;
             min-width: 60px;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
             
             &:hover{
                 background-color: #23322320;
@@ -132,6 +139,8 @@
                 top: 100%;
                 left: 0;
                 text-align: start;
+                width: 100%;
+                min-width: 150px;
 
                 &__element{
                     width: 100px;

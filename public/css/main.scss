@@ -80,6 +80,14 @@ section{
     overflow: hidden;
 }
 
+ul{
+    list-style: inside;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 .con{
     width: 100%;
     display: flex;
@@ -107,3 +115,5 @@ section{
 @import 'sub/bas';
 @import 'sub/serv';
 @import 'sub/sas';
+@import 'sub/contacts';
+@import 'sub/simplepage';

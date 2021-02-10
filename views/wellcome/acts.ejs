@@ -1,18 +1,20 @@
 <section class="acts">
     <div class="con">
         <div class="acts__ge">
-            <a href="" class="acts__gc" style="background-image: url(/imgs/project-1.jpg)">
-                <h1>asd</h1>
-                <p>This is desc</p>
-            </a>
-            <a href="" class="acts__gc" style="background-image: url(/imgs/project-2.jpg)">
-                <h1>asd</h1>
-                <p>This is desc</p>
-            </a>
-            <a href="" class="acts__gc" style="background-image: url(/imgs/project-3.jpg)">
-                <h1>asd</h1>
-                <p>This is desc</p>
-            </a>
+            <% dbase.projects.forEach((el, i) => { %>
+                <% if (i < 3) { %>
+                    <a href="<%= lang %>/projects/<%= el.id %>" class="acts__gc" style="background-image: url('<%= el.image_1 %>')">
+                        <h1><%= el["name_" + text.lan] %></h1>
+                        <p class="acts__lim"><%= el["desc_" + text.lan] %></p>
+                    </a>
+                <% } %>
+            <% }) %>
         </div>
+        <script>
+            var lims = document.querySelectorAll(".acts__lim");
+            lims.forEach(el => {
+                el.innerHTML = el.innerHTML.substring(0,100) + "...";
+            });
+        </script>
     </div>
 </section>
