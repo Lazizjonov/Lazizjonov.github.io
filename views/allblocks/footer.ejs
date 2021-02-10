@@ -23,7 +23,7 @@
         </div>
         <div class="footer__el">
             <h5><%= text.sms %></h5>
-            <form action="lang/" method="POST" class="footer__form">
+            <form action="<%= lang %>/" method="POST" class="footer__form">
                 <input name="email" type="email" placeholder="E-mail" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$' required>
                 <button type="submit" class="simple__btn"><%= text.turnon %></button>
                 <input name="type" type="hidden" value="mail">
