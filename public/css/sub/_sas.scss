@@ -21,6 +21,10 @@
         width: 100%;
         margin: 20px;
         
+        @include respond-900{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
         @include respond-600{
             grid-template-columns: repeat(1, 1fr);
         }

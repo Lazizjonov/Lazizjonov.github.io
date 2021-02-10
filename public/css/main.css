@@ -591,7 +591,7 @@ html {
 
 @media screen and (max-width: 600px) {
   .slider__elem .con {
-    max-width: 300px;
+    max-width: 80%;
     padding-left: 30px;
   }
 }
@@ -967,16 +967,24 @@ html {
 
 .r {
   width: 150px;
-  height: 30px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.r a {
+  margin-bottom: 20px;
 }
 
 .head {
@@ -1372,7 +1380,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 5px 20px;
+    padding: 20px 20px;
   }
 }
 
@@ -1430,6 +1438,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
 }
 
 .footer__el--links {
@@ -1454,6 +1463,20 @@ html {
 
 .footer__el--links img {
   width: 40px;
+}
+
+.rights .con {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
 .auth {
@@ -1697,7 +1720,7 @@ html {
   margin-bottom: -100px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .acts {
     -webkit-transform: translate(0);
             transform: translate(0);
@@ -1717,7 +1740,7 @@ html {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .acts__ge {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
@@ -1750,6 +1773,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  padding: 20px;
 }
 
 @media screen and (max-width: 900px) {
@@ -1981,6 +2005,8 @@ html {
 @media screen and (max-width: 600px) {
   .serv__gc--header h1 {
     width: 100%;
+    background-color: #2ba837;
+    font-size: 2rem;
   }
 }
 
@@ -2036,6 +2062,13 @@ html {
           justify-content: center;
   width: 100%;
   margin: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .sas__ge {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2239,6 +2272,18 @@ html {
   background-color: #006b009d;
   color: white;
   padding: 40px;
+}
+
+@media screen and (max-width: 900px) {
+  .simplepage__ge--head {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .simplepage__ge--head {
+    font-size: 1rem;
+  }
 }
 
 .simplepage__sli {

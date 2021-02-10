@@ -321,14 +321,14 @@ router.get('/services/:id', (req, res)=>{
 
 
 
-// router.post('/', async (req, res)=>{
-//     if(req.body.type === "mail"){
-//         const answer = await dbase(`INSERT INTO emails ( mail ) VALUES (?);`, [req.body.email]);
-//         res.status(200).render(     'main',         {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
-//     }else if(req.body.type === "tel"){
-//         const answer = await dbase(`INSERT INTO tel ( name, tel ) VALUES (?, ?);`, [req.body.name, req.body.tel]);
-//         res.status(200).render(     'main',         {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
-//     }
-// });
+router.post('/', async (req, res)=>{
+    if(req.body.type === "mail"){
+        const answer = await dbase(`INSERT INTO emails ( mail ) VALUES (?);`, [req.body.email]);
+        res.status(200).render(     'main',         {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
+    }else if(req.body.type === "tel"){
+        const answer = await dbase(`INSERT INTO tel ( name, tel ) VALUES (?, ?);`, [req.body.name, req.body.tel]);
+        res.status(200).render(     'main',         {lang: req.baseUrl,     dbase: req.database,    text: req.lang});
+    }
+});
 
 module.exports = router;

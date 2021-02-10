@@ -52,10 +52,15 @@
 
 .r{
     width: 150px;
-    height: 30px;
+    height: 60px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
+    a{
+        margin-bottom: 20px;
+    }
 }
 
 .head{

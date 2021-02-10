@@ -238,6 +238,14 @@ function switchmenu(){
     }
 }
 
+if(dqs(".stick__mid a")){
+    var hrefs = dqs(".stick__mid a");
+    hrefs.forEach(hr => {
+        hr.addEventListener("click", switchmenu);
+    });
+}
+
+
 /* preloader js */
 
 window.onload = function(){

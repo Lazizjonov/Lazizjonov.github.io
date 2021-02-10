@@ -4,7 +4,7 @@
     margin-bottom: -100px;
 
     
-    @include respond-600{
+    @include respond-900{
         transform: translate(0);
         margin-bottom: 0;
     }
@@ -18,7 +18,7 @@
             margin-bottom: 20px;
         }
 
-        @include respond-600{
+        @include respond-900{
             grid-template-columns: repeat(1, 1fr);
             margin-top: 10px;
         }
@@ -40,6 +40,7 @@
         font-size: 1.2rem;
         flex-direction: column;
         text-align: center;
+        padding: 20px;
 
         @include respond-900{
             width: calc(100% - 10px);
