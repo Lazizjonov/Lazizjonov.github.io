@@ -118,7 +118,7 @@ router.post('/:id/', async (req, res)=>{
         }
 
         if (req.body.reqtype === "del"){
-            const answer = await dbase(`DELETE FROM ${req.params.id} WHERE ${primary} = ${req.body[primary]}`);
+            const answer = await dbase(`DELETE FROM ${req.params.id} WHERE ${primary} = '${req.body[primary]}'`);
         }
 
         if (req.body.reqtype === "edit"){
